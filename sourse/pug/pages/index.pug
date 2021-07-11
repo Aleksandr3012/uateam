@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '⚡️Агентство интернет-маркетинга #UAATEAM'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock()
+	+sServises()
+	+sTeam().background-blue
+	+sCases()
+	+sOffer()
+	+sForm().background-dark
+	+footer().bg-primary
+
+
+

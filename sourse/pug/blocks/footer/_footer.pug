@@ -1,0 +1,24 @@
+mixin footer()
+	+b.FOOTER.footer&attributes(attributes)
+		.container 
+			.row
+				.col-lg
+					+e.partnerWrap
+						+e.partner 
+							mixin item(i)
+								+e.item(href="#" target="_blank")
+									img(src=`img/${i}`, alt="" loading="lazy" sizes="141px")&attributes(attributes)
+							+item('@2x/partner-1.png')
+							+item('@2x/partner-2.png')
+							+item('@2x/partner-3.png')
+							+item('@2x/partner-4.png')
+							+item('partner-5.svg').svg
+						+e.widget
+							<script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="482408"></div>
+					+e.map(href="#") Sitemap 
+				.col-lg-auto
+					+soc()
+					+e.dev UAATEAM © 2021
+	+b.scroll-top
+		+icon('arrow-left')
+		span UP

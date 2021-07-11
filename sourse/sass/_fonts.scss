@@ -1,0 +1,22 @@
+$default-font: "GothamPro";
+// $file-form: ($file-formats: woff2 woff ttf);
+$addr: '../fonts/';
+$file-format: woff2;
+
+
+// If font from googlefont, next lines remove
+
+@include font-face ($default-font, $addr + "GothamPro", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GothamPro-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GothamPro-Light", 300, $file-formats: $file-format);
+
+// font-weight helper:
+// 100 Thin
+// 200 Extra Light
+// 300 Light
+// 400 Normal
+// 500 Medium
+// 600 Semi Bold
+// 700 Bold
+// 800 Extra Bold
+// 900 Ultra Bold

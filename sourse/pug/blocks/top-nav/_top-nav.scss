@@ -1,0 +1,80 @@
+.top-nav {
+	position: fixed; 
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	background-color:#1b1d1f;
+	padding: rem(10) 0;
+	@include media-breakpoint-up(lg) {
+		padding: rem(35) 0 rem(3);
+	}
+	@include mt;
+	&.fixed { 
+		bottom: auto;
+		margin-top: 0;
+		background-color: #fff;
+		box-shadow: 0 4px 7px 8px rgba(0, 0, 0, 0.14);
+
+		.menu .menu-link, .top-nav__lang, .top-nav__btn {
+			color: #000;
+		}
+	}
+	.row{
+	 @include media-breakpoint-only(lg) {
+		 @include roww(6px);
+	 }
+	}
+
+	&__logo {
+		display: inline-block;
+		width: 78px;
+		@include media-breakpoint-up(lg) {
+			width: 110px;
+			display: block;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 136px;
+
+		}
+	}
+
+	&__tel {
+		text-decoration: none;
+		font-weight: 300;
+		letter-spacing: rem(1px);
+		@include media-breakpoint-up(xl) {
+			letter-spacing: rem(2px);
+		}
+	}
+
+	&__lang {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		padding-bottom: 2px;
+
+		&.active {
+			border-bottom: 3px solid #0fa663;
+		}
+	}
+
+	.btn {
+		@include media-breakpoint-up(lg) {
+			padding: 5px;
+		}
+	}
+
+
+
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {}
+}
+
+
+
+

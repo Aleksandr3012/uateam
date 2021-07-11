@@ -1,0 +1,52 @@
+ 
+	  
+.soc{
+	@include roww(10px, m);
+	display: flex;
+	flex-wrap: wrap;
+	&__item{
+		text-decoration: none !important; 
+		vertical-align: middle;
+		@include mt;
+		display: grid;
+		place-items: center;
+		border: 2px solid #fdce08;
+		background: #fdce08;
+		width: 32px;
+    height: 32px;
+		&:hover{
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// opacity: .6 ;
+			background: transparent;
+
+			.icon {
+				color: #fff;
+			}
+		}
+		
+	}
+	.icon{
+		font-size: rem(25);
+		color: #000;
+		@include mt;
+	}
+
+	.icon-youtube {
+		font-size: rem(20);
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+

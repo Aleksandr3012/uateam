@@ -1,0 +1,53 @@
+// start .sOffer
+.sOffer {
+	// --sPT: ;
+	--sPB: #{rem(200)};
+	--sTPB: #{rem(20)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: 0;
+	}
+
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
+
+	h2, .h2 {
+		color: #f6d20a;
+		text-transform: uppercase;
+	}
+
+	h3, .h3 {
+		color: #fff
+	}
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(60px);
+		}
+	}
+
+	.icon {
+		color: $secondary;
+		font-size: rem(102);
+	}
+
+	&__inner {
+		background-color: #343c9b;
+		padding: rem(20) rem(30);
+	}
+
+	&__btn {
+		color: $primary;
+		min-height: 51px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-width: 4px;
+		min-width: 198px;
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOffer

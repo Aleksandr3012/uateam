@@ -1,0 +1,46 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.align-items-center
+				.col.col-lg-auto
+					+e.logo(href="/")
+						img.res-i(src="img/svg/logo.svg", alt="Логотип")
+
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto.d-none.d-lg-block
+					+e.tel(href="tel:+380661769949") +38 (066) 176 99 49
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-secondary.link-modal-js(href="#") Отправить заявку
+				.col-auto.d-none.d-lg-block
+					+e.row.row 
+						.col 
+							+e.lang(href="#") en
+						.col 
+							+e.lang.active(href="#") ru
+						.col 
+							+e.lang(href="#") ua
+
+
+					
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+	// end top-nav

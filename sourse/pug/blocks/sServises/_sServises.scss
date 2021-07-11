@@ -1,0 +1,89 @@
+// start .sServises
+.sServises {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__slider {
+			@include media-breakpoint-up(md) {
+				height: calc(400px * 2);
+			}
+		}
+
+		&__slide {
+			padding: 50px 60px;
+			@include media-breakpoint-up(md) {
+				height: 400px;
+				margin-top: 0 !important;
+			}
+			.gif {
+				display: none;
+			}
+		}
+		&__wrap {
+			position: relative;
+			border: 6px solid #f0f2f3;
+			display: flex;
+			@include media-breakpoint-up(lg) {
+				padding: 60px 30px 44px 80px;
+			}
+
+			&:hover {
+				.default {
+					display: none;
+				}
+				.gif {
+					display: block;
+				}
+			}
+		}
+		&__imgWrap {
+			background-color: #fff;
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(-140);
+				margin-right: rem(20);
+			}
+		}
+		&__txtWrap {}
+		&__title {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&__btnWrap {
+			text-align: center;
+			@include media-breakpoint-up(lg) {
+				text-align: right;
+			}
+		}
+		&__btn {
+			font-size: rem(12);
+			min-height: rem(40);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			@include media-breakpoint-up(lg) {
+				min-width: rem(200);
+			}
+		}
+		&__ {}
+		&__ {}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+
+	&--inner {
+		.sServises__slider {
+			@include media-breakpoint-up(md) {
+				height: calc(375px * 8);
+			}
+		}
+		.sServises__slide {
+			@include media-breakpoint-up(md) {
+				height: 375px;
+			}
+		}
+	}
+} // end.sServises

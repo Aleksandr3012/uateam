@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sServiceImplementation/_sServiceImplementation.pug
+include ../blocks/sOptions/_sOptions.pug
+include ../blocks/sServiceAdvantages/_sServiceAdvantages.pug
+include ../blocks/sCasesSlidedr/_sCasesSlidedr.pug
+include ../blocks/sReviews/_sReviews.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '👉 Разовая настройка контекстной рекламы Google Ads заказать недорого | UAATEAM'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock-inner({
+		img: 'headerBlock-nastroika-bg.jpg'
+	}).headerBlock-nastrojka-kontekstnoj
+		+b.section-title
+			h1 НАСТРОЙКА 
+				span.text-secondary КОНТЕКСТНОЙ РЕКЛАМЫ
+			h3 Показ ваших рекламных объявлений в поиске Google<br>только целевым пользователям
+		+e.linksWrap--line.d-none.d-md-flex
+			+e.link(href="https://www.google.com/partners/agency?id=4078913348" target="_blank") we are google
+			+e.link(href="https://www.facebook.com/business/partner-directory/details?id=321716569002489") facebook partners
+	+sContent()
+		.row 
+			.col-lg-6
+				+b.section-title
+					h2 ЧТО ТАКОЕ КОНТЕКСТНАЯ РЕКЛАМА:
+			.col-lg-6
+				
+	+sWhatYouGet()
+	+sServiceImplementation()
+	+sOptions()
+	+sServiceAdvantages()
+	+sContent()
+		.row 
+			.col-lg-6
+				+b.section-title
+					h2 КАКИЕ МОГУТ БЫТЬ РЕЗУЛЬТАТЫ?
+			.col-lg-6
+	+sCasesSlidedr()
+	+sReviews()
+	+sForm().background-dark
+	+footer().bg-primary
+
+
+

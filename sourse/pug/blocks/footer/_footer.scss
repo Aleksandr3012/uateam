@@ -1,0 +1,86 @@
+.footer {
+	padding: 23px 0 5px;
+	margin-top: auto;
+	text-align: center;
+	color: #ffffff;
+
+	&__widget {
+		max-width: rem(200);
+	}
+
+	&__map {
+		color: #fff !important;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	&__partnerWrap {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	&__partner {
+		display: inline-flex;
+		flex-wrap: wrap;
+
+		@include roww(5px, m);
+		justify-content: center;
+	}
+
+	&__item img{
+		max-width: 141px;
+    max-height: 41px;
+
+		&.svg {
+			width: 100%;
+		}
+	}
+
+	.soc {
+		@include media-breakpoint-down(lg) {
+			justify-content: center;
+			padding-top: rem(25);
+		}
+	}
+
+
+@include media-breakpoint-up(xs) {}
+@include media-breakpoint-between(md, xl) {}
+@include media-breakpoint-only(xl) {}
+@include media-breakpoint-down(xs) {}
+}
+
+.scroll-top {
+	position: fixed;
+	z-index: 900;
+	right: 0px;
+	bottom: 35px;
+	@include mt;
+	cursor: pointer;
+	background-color: #fff;
+	padding: rem(10) rem(20);
+
+	transform: translateX(100px);
+	&.active {
+		transform: translateX(0) rotate(90deg);
+	}
+
+	.icon {
+		color: $secondary;
+		font-size: rem(22);
+		margin-right: rem(10);
+		@include mt;
+	}
+
+	&:hover {
+		.icon {
+			transform: translateX(-5px);
+		}
+	}
+
+	span {
+		// writing-mode:tb-rl;
+		font-weight: bold;
+	}
+}

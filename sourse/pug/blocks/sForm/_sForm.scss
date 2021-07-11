@@ -1,0 +1,114 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(280)};
+		--sPB: #{rem(280)};
+		--sTPB: #{rem(45)};
+	}
+
+	&__inner {
+		max-width: rem(574);
+		margin-left: auto;
+	}
+
+	h2 {
+		color: #f6d20a;
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	&__bgTxt {
+		position: absolute;
+		top: 10px;
+		@include media-breakpoint-up(lg) {
+			top: -100px;
+		}
+		left: 0;
+		z-index: -1;
+		color: #343c9b;
+		font-size: 16vw;
+		line-height: 1;
+		letter-spacing: 20px;
+		font-weight: bold;
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sForm
+
+.background-dark {
+	background-color: #000000;
+	@include media-breakpoint-up(lg) {
+		clip-path: polygon(0 80px, 100% 0%, 100% 100%, 0 100%);
+	}
+}
+
+.form-wrap {
+	&__input-wrap {
+		position: relative;
+		margin-bottom: rem(21);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(37);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			right: 22px;
+			top: 20px;
+			width: 15px;
+			height: 25px;
+			background: url('../img/sprite.png') -1088px -11px no-repeat;
+			z-index: 100;
+			opacity: 0;
+			@include mt(.1s);
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__input {
+		height: rem(49);
+		@include media-breakpoint-up(sm) {
+			height: rem(62);
+		}
+		border-width: 3px;
+		box-shadow: none !important;
+		@include media-breakpoint-up(md) {
+			font-size: rem(24);
+		}
+
+		&:focus {
+			background: #2b2a2b;
+		}
+	}
+
+	&__btn {
+		border-radius: rem(12);
+		font-size: rem(18);
+		line-height: calc(57 / 18);
+		font-weight: bold;
+		width: rem(280);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(42);
+		}
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+	}
+}

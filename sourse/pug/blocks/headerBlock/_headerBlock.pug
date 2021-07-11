@@ -1,0 +1,30 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.bgWrap 
+			video.headerVideo(autoplay="autoplay" muted="muted" loop="loop" id="headerVideo" poster="img/@2x/header-bg.jpg")
+				source(src="img/video/Office_Perks.mp4")
+		.container
+			+b.section-title
+				h1 #[span.text-secondary U] <br> #[span.text-secondary A]re <br> #[span.text-secondary A]wesome
+			+e.linksWrap
+				+e.link(href='https://www.youtube.com/channel/UC4bfLCbRF-0MUOH5e9vF3iA' target="_blank") youtube
+				+e.link(href='https://www.linkedin.com/company/9412541/' target="_blank") linkedin
+				+e.link(href='https://www.facebook.com/uaateamagency' target="_blank") facebook
+				+e.link(href='https://www.instagram.com/uaateam/' target="_blank") instagram
+
+		+e.scrollWrap.d-none.d-lg-block
+			+e.scroll.scroll-link(href="#sServises")
+				+pic('mouse.png','','')
+						
+	// end headerBlock
+
+mixin headerBlock-inner(data)
+	// start headerBlock
+	+b.headerBlock--inner.section#headerBlock&attributes(attributes)
+		+e.bgWrap 
+			+pic(data.img,'','')
+		.container
+			block
+			
+

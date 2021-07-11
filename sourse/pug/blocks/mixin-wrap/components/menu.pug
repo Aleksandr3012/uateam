@@ -1,0 +1,22 @@
+//- WP menu
+mixin mnu()
+
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item(itemprop="item" )
+			span.menu-link УСЛУГИ
+			ul.sub-menu
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") КОНТЕКСТНАЯ РЕКЛАМА
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") SMM ПРОДВИЖЕНИЕ
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") SEO
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") ВСЕ УСЛУГИ
+		li.menu-item(itemprop="item" )
+			span.menu-link КЛИЕНТЫ
+			ul.sub-menu
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") Кейсы
+		li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") НАША КОМАНДА
+		li.menu-item(itemprop="item" )
+			a.menu-link(href="#" itemprop="url") блог
+			ul.sub-menu
+				li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") курсы
+		li.menu-item(itemprop="item" ): a.menu-link(href="#" itemprop="url") контакты
+//- menu

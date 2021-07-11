@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg enable-background="new 0 0 112 72" version="1.1" viewBox="0 0 112 72" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:#FDD302;}
+	.st1{fill:#EE5543;}
+	.st2{fill:#3D459A;}
+	.st3{fill:#0FA663;}
+</style>
+<switch>
+	<foreignObject width="1" height="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+		
+	</foreignObject>
+	<g>
+		
+			<path class="st0" d="M0.7,27.8L41.2,1l0.5,0.9c0.8,1.5,1.5,2.9,2.1,4.4L44,7.1L12.7,27.8L44,48.5l-0.3,0.7     c-0.6,1.5-1.3,2.9-2,4.4l-0.5,0.9L0.7,27.8z"/>
+			<path class="st1" d="m47.2 64.9-0.3 0.7c-0.6 1.5-1.3 3-2.1 4.4l-0.4 1-40.6-26.8 5.9-3.9 1.3 0.8 36.2 23.8z"/>
+			<path class="st2" d="m47.9 32c0 0.3-0.1 0.6-0.1 0.9v0.4c-0.1 1-0.2 2.1-0.4 3.1-0.1 0.5-0.1 0.9-0.2 1.3-0.3 1.6-0.6 2.9-0.9 4.1l-0.3 1.2-1.1-0.7-22.2-14.5 23.2-15.3 0.4 1.3c0.3 1.2 0.6 2.5 0.9 4.1 0.1 0.4 0.1 0.7 0.2 1.1 0.2 1.2 0.3 2.3 0.4 3.3v0.4c0 0.3 0.1 0.6 0.1 0.9 0.1 1.6 0.2 3 0.2 4.3 0 1.2-0.1 2.6-0.2 4.1z"/>
+			<path class="st3" d="m55.3 48-0.4 1-4.1-2.7 0.1-0.7c0.1-0.2 0.1-0.5 0.2-0.7l0.2-0.6c0.2-0.6 0.4-1.3 0.5-1.9 0.2-1 0.5-2 0.7-3l0.1-0.4 0.3-1.5c0.2-1.1 0.3-2.2 0.4-3.3l0.1-0.6c0-0.3 0.1-0.6 0.1-1 0.1-1.7 0.2-3.3 0.2-4.9s-0.1-3.2-0.2-4.9c0-0.3-0.1-0.6-0.1-1l-0.1-0.6c-0.1-1.1-0.3-2.2-0.4-3.3l-0.3-1.5-0.1-0.4c-0.2-1-0.4-2-0.7-3-0.2-0.6-0.3-1.3-0.5-1.9l-0.2-0.6c-0.1-0.2-0.1-0.5-0.2-0.7l-0.2-0.7 4.1-2.7 0.4 1c2.8 6.5 4.2 13.3 4.2 20.2 0 7.1-1.4 13.9-4.1 20.4z"/>
+			
+				<path class="st0" d="m81.2 33.9c-0.4 0.6-1.1 1.2-1.8 1.5s-1.7 0.6-2.7 0.6h-0.8c-1 0-1.9-0.3-2.6-0.6s-1.3-0.9-1.7-1.5-0.6-1.4-0.6-2.3v-8.6h4v8.6c0 0.4 0 0.7 0.3 1s0.6 0.4 1 0.4 0.9-0.1 1.2-0.4 0.5-0.6 0.5-1v-8.6h4v8.6c0 0.9-0.4 1.6-0.8 2.3z"/>
+				<path class="st0" d="m92.8 23h-4.8l-4.2 13h3.7l0.7-3h4l0.8 3h4l-4.2-13zm-4.2 8 1.4-5h0.4l1.5 5h-3.3z"/>
+				<path class="st0" d="m107.5 23h-4.8l-4.2 13h3.7l0.7-3h4l0.8 3h4l-4.2-13zm-4.2 8 1.4-5h0.4l1.5 5h-3.3z"/>
+			
+		
+	</g>
+</switch>
+
+</svg>

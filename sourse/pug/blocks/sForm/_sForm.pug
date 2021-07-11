@@ -1,0 +1,17 @@
+mixin sForm()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+e.bgTxt OPEN <br> TO <br>  NEW
+			+e.inner
+				+b.section-title
+					h2 НАЧАТЬ РАБОТУ C UAATEAM
+				+form-wrap 
+					+input('Ваше имя','text')(required)
+					+input('Ваше телефон','tel')(required)
+					+input('Email','email')(required)
+					+input('Сайт','text')(required)
+					.text-end
+						+e.btn.btn.btn-secondary(type="submit") Начать 
+			.row
+	// end sForm
