@@ -33,6 +33,9 @@
 				transform: translateY(40px);
 			}
 		}
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(28);
+		}
 	}
 
 	&__position {
@@ -73,7 +76,10 @@
 		transform: rotate(-90deg) translate(0, -100%);
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 12px;
+		@include media-breakpoint-up(sm) {
+			top: 0;
+		}
 		transform-origin: top right;
 	}
 	&__btn {
