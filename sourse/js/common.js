@@ -365,12 +365,11 @@ function eventHandler() {
 	const mastersSlider = new Swiper('.sServises__slider--js', {
 		slidesPerView: 1,
 		watchOverflow: true,
-		spaceBetween: 16,
+		spaceBetween: 0,
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
-				spaceBetween: 0,
 			}
 		},
 		pagination: {

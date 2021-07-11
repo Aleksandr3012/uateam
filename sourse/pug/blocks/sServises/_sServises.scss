@@ -6,15 +6,26 @@
 
 		&__slider {
 			@include media-breakpoint-up(md) {
+				height: calc(465px * 2 + #{rem(40)});
+			}
+			@include media-breakpoint-up(lg) {
 				height: calc(400px * 2);
+			}
+			@include media-breakpoint-down(lg) {
+				padding-top: rem(40);
 			}
 		}
 
 		&__slide {
-			padding: 50px 60px;
+			padding: rem(30) 0 ;
 			@include media-breakpoint-up(md) {
-				height: 400px;
+				padding: 30px 30px 20px;
+				height: 465px;
 				margin-top: 0 !important;
+			}
+			@include media-breakpoint-up(lg) {
+				height: 400px;
+				padding: 50px 60px;
 			}
 			.gif {
 				display: none;
@@ -24,6 +35,11 @@
 			position: relative;
 			border: 6px solid #f0f2f3;
 			display: flex;
+			@include media-breakpoint-down(lg) {
+				flex-direction: column;
+				justify-content: center;
+			}
+			padding: 80px 30px 30px;
 			@include media-breakpoint-up(lg) {
 				padding: 60px 30px 44px 80px;
 			}
@@ -43,6 +59,21 @@
 				margin-left: rem(-140);
 				margin-right: rem(20);
 			}
+			@include media-breakpoint-down(lg) {
+				flex-grow: 1;
+				margin-top: rem(-150);
+				max-width: 124px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(20);
+			}
+
+			img {
+				@include media-breakpoint-down(lg) {
+					max-width: 100%;
+    			height: auto;
+				}
+			}
 		}
 		&__txtWrap {}
 		&__title {
@@ -61,8 +92,8 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
+			min-width: rem(200);
 			@include media-breakpoint-up(lg) {
-				min-width: rem(200);
 			}
 		}
 		&__ {}
@@ -87,3 +118,16 @@
 		}
 	}
 } // end.sServises
+
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	&-bullet {
+		display: block;
+		background: #c8c8c8;
+	}
+
+	&-bullet-active {
+		background: $secondary;
+	}
+}
