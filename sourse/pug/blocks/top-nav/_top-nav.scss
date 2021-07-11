@@ -16,9 +16,10 @@
 		background-color: #fff;
 		box-shadow: 0 4px 7px 8px rgba(0, 0, 0, 0.14);
 
-		.menu .menu-link, .top-nav__lang, .top-nav__btn {
+		.menu .menu-link, .top-nav__lang, .top-nav__btn, .toggle-menu-mobile {
 			color: #000;
 		}
+		
 	}
 	.row{
 	 @include media-breakpoint-only(lg) {
