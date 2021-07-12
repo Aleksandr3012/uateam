@@ -2,8 +2,17 @@ mixin sOptions(data)
 	// start sOptions
 	+b.SECTION.sOptions.section#sOptions&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sOptions
+			+b.section-title.text-center
+				h2 ВАРИАНТЫ ЗАКАЗА УСЛУГИ
 				
 			.row
+				mixin item(title,txt,img)
+					.col-md-6
+						+e.item 
+							h3= title 
+							p= txt 
+							+e.imgWrap 
+								+pic(img,'','')
+				+item('РАЗОВАЯ НАСТРОЙКА','Вы получаете разовую настройку рекламных кампаний, по предварительно оговоренным категориям товаров или услуг. Услуга включает в себя настройку и 1 неделю мониторинга кампаний после запуска.','sServises-1.jpg')
+				+item('ВЕДЕНИЕ АККАУНТА','Мы полностью берем на себя создание и последующую оптимизацию рекламных кампаний. Мы постоянно работаем над повышением эффективности и над тестом и запуском новых направлений или типов рекламных кампаний.','sServises-13.jpg')
 	// end sOptions

@@ -2,8 +2,23 @@ mixin sWhatYouGet(data)
 	// start sWhatYouGet
 	+b.SECTION.sWhatYouGet.section#sWhatYouGet&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sWhatYouGet
+			+b.section-title.text-center
+				h2 ЧТО ВЫ ПОЛУЧИТЕ, ЗАКАЗАВ УСЛУГУ?
 				
-			.row
+			+e.row.row
+				mixin item(i,title,txt)
+					.col-md-6.col-xl-3
+						+e.item
+							+e.num= i 
+							+e.title.ttu.h3= title
+							+e.imgWrap&attributes(attributes)
+								+pic(`whatYouGet-${i}.png`,'','')
+							+e.txt!= txt
+				+item('01','ПРОДАЖИ','Рост продаж из поиска')(style="background-color: #ee5643;")
+				+item('02','GOOGLE SHOPPING','Настройку кампаний Shopping')(style="background-color: #fecc00;")
+				+item('03','ОХВАТ','Охват потенциальной аудитории в медийной сети')(style="background-color: #ee5643;")
+				+item('04','РЕМАРКЕТИНГ','Продажи из ремаркетинг кампаний')(style="background: #ee5543;")
+			.text-center
+				a.btn.btn-outline-secondary.sWhatYouGet__btn(href="#") Обсудить задачу
+
 	// end sWhatYouGet

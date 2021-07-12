@@ -25,9 +25,9 @@ const fileSources = {
 	// end {blockName}`,
 	scss: `// start .{blockName}
 .{blockName} \{
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
 
 	@include media-breakpoint-up(sm) {}

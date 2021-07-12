@@ -7,8 +7,9 @@ $file-format: woff2;
 // If font from googlefont, next lines remove
 
 @include font-face ($default-font, $addr + "GothamPro", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "GothamPro-Bold", bold, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GothamPro-Light", 300, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GothamPro-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GothamPro-Black", 900, $file-formats: $file-format);
 
 // font-weight helper:
 // 100 Thin

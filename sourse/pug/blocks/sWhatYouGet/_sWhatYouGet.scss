@@ -1,8 +1,105 @@
 // start .sWhatYouGet
 .sWhatYouGet {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(75)};
+	}
+	// overflow: hidden;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		@media (max-width: 767px) {
+			top: 114px;
+		}
+		@media (max-width: 860px) {
+			top: 63px;
+		}
+		left: -432px;
+		width: 883px;
+		height: 883px;
+		border-radius: 50%;
+		background: #fecc00;
+		z-index: -1;
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+
+	h2, .h2 {
+		text-transform: uppercase;
+	}
+
+	&__item {
+		// min-height: 100%;
+		height: calc(100% - #{rem(21)});
+		margin-bottom: rem(21);
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 28px 20px 33px 37px;
+		box-shadow: 2px 2px 40px rgba(41,41,41,.18);
+		background: #fff;
+		@include media-breakpoint-down(md) {
+			max-width: 300px;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+
+	&__row {
+		padding-bottom: rem(70);
+		@include media-breakpoint-up(lg) {
+			@include roww(45px);
+		}
+		@include media-breakpoint-up(xl) {
+			@include roww(35px);
+		}
+	}
+
+	&__imgWrap {
+		display: grid;
+		place-items: center;
+		width: rem(87px);
+		height: rem(87px);
+		margin: 0 0 rem(27px);
+		border-radius: 50%;
+
+	}
+	&__num {
+		font-size: rem(50);
+		font-weight: 900;
+		margin-bottom: rem(16);
+	}
+	&__title {
+		font-weight: bold;
+		margin-bottom: rem(16);
+	}
+
+	&__txt {
+		position: relative;
+		line-height: 1.75;
+		font-size: rem(20);
+
+		&::before {
+			content: '';
+			width: 40px;
+			height: 3px;
+			display: block;
+			background: #7a7a7a;
+			margin-bottom: rem(13);
+		}
+	}
+
+	&__btn {
+		color: $body-color;
+		font-size: rem(20);
+		padding: 7px 60px;
+	}
 
 
 	@include media-breakpoint-up(sm) {}

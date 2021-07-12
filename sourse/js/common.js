@@ -361,6 +361,27 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+
+	const sCasesSlided = new Swiper('.sCasesSlidedr__slider--js', {
+		slidesPerView: 1,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.sCasesSlidedr .swiper-button-next',
+			prevEl: '.sCasesSlidedr .swiper-button-prev',
+		},
+	});
 	
 	const mastersSlider = new Swiper('.sServises__slider--js', {
 		slidesPerView: 1,

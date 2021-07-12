@@ -1,9 +1,33 @@
 // start .sCasesSlidedr
 .sCasesSlidedr {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+
+	.section-title {
+		&__case {
+			display: block;
+			margin: 0 auto 30px;
+			background: url('../img/sprite.png') no-repeat -1004px -11px;
+			width: 62px;
+			height: 58px;
+		}
+	}
+
+	&__wrap {
+		max-width: 196px;
+		margin: 0 auto;
+		border-radius: 50%;
+		overflow: hidden;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		position: relative;
+		color: #fff;
+	}
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}

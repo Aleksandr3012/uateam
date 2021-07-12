@@ -2,8 +2,25 @@ mixin sServiceImplementation(data)
 	// start sServiceImplementation
 	+b.SECTION.sServiceImplementation.section#sServiceImplementation&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sServiceImplementation
+			+b.section-title.text-center
+				h2 КАК ПРОИСХОДИТ ВНЕДРЕНИЕ УСЛУГИ
+
 				
-			.row
+			+e.row.row
+				mixin col(i,t)
+					+e.col.col-sm-6.col-md-4.col-xl-3
+						+e.item
+							+e.head 
+								+e.num= i 
+								+pic(`impl-${i}.png`,'','')
+							h3= t
+				+col('1','ИЗУЧЕНИЕ ПРОДУКТА')
+				+col('2','АНАЛИЗ КОНКУРЕНТОВ')
+				+col('3','СБОР СЕМАНТИКИ')
+				+col('4','ГРУППИРОВКА КЛЮЧЕВЫХ СЛОВ')
+				+col('5','НАПИСАНИЕ ОБЪЯВЛЕНИЙ')
+				+col('6','СОЗДАНИЕ РЕКЛАМНЫХ КАМПАНИЙ')
+				+col('7','ДОБАВЛЕНИЕ РАСШИРЕНИЙ')
+				+col('8','ПРОВЕРКА ОТСЛЕЖИВАНИЯ ЦЕЛЕЙ')
+				+col('9','ЗАПУСК')
 	// end sServiceImplementation

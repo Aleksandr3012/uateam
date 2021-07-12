@@ -1,29 +1,94 @@
+// start .sContent
+.sContent {
+	--sTPB: #{rem(34)};
 
-	// start .sContent
-	.sContent {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+
+	p {
+		font-size: rem(20);
+		line-height: 1.75;
+		margin-bottom: rem(33);
+
+		a {
+			color: #555555;
+			text-decoration: underline;
+
+			&:hover {
+				color: $body-color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	h3, .h3 {
+		font-weight: bold;
+	}
+
+
+	&__link {
+		display: inline-block;
+		padding-bottom: 3px;
+		text-decoration: none;
+		font-weight: 700;
+		color: #3d459a;
+		border-bottom: 1px dashed;
+
+		&:hover {
+			color: #000;
+		}
+	}
+	&__result {
+		position: relative;
+		border: 8px solid var(--result-color);
+		padding: 25px 27px 17px 28px;
+		margin-bottom: rem(55);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(10);
+		}
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(30);
+		}
+
+		@include media-breakpoint-only(md) {
+			padding: 53px 18px 95px;
+			height: 100%;
+
+			img {
+				position: absolute;
+				left: 18px;
+				bottom: 32px;
+			}
+		}
+	}
+	&__num {
+		@include rfs(55px);
+		font-weight: bold;
+		color: var(--result-color);
+	}
+	&__resultHead {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: rem(17);
+	}
+	&__row {
+		@include media-breakpoint-up(xl) {
+			@include roww(100px);
+		}
+	}
+
+	&__resultWrap {
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(45);
+		}
+	}
+
 	@include media-breakpoint-up(xs) {}
-	
-	//
 	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
 	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContent
