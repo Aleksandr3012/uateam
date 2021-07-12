@@ -1,6 +1,6 @@
 // start .sForm
 .sForm {
-	--sPT: #{rem(60)};
+	--sPT: #{rem(100)};
 	--sPB: #{rem(60)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(lg) {

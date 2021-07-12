@@ -350,16 +350,37 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+	const swiper4 = new Swiper('.sReviews__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 30,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
+		autoHeight: true,
+		loop: true,
+		pagination: {
+			el: '.sReviews .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 
+
+	var casesThumbSlider = new Swiper(".sCases__sliderThumb--js", {
+		spaceBetween: 0,
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchSlidesVisibility: true,
+	});
+	var casesSlider = new Swiper(".sCases__slider--js", {
+		spaceBetween: 0,
+		pagination: {
+			el: '.sCases .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		thumbs: {
+			swiper: casesThumbSlider,
+		},
 	});
 
 	const sCasesSlided = new Swiper('.sCasesSlidedr__slider--js', {

@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 let div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
@@ -362,14 +356,36 @@ function eventHandler() {
 
 		}
 	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+	const swiper4 = new Swiper('.sReviews__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		autoHeight: true,
+		loop: true,
+		pagination: {
+			el: '.sReviews .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
+	var casesThumbSlider = new Swiper(".sCases__sliderThumb--js", {
+		spaceBetween: 0,
 		slidesPerView: 'auto',
 		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	}));
+		watchSlidesVisibility: true
+	});
+	var casesSlider = new Swiper(".sCases__slider--js", {
+		spaceBetween: 0,
+		pagination: {
+			el: '.sCases .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		thumbs: {
+			swiper: casesThumbSlider
+		}
+	});
 	const sCasesSlided = new Swiper('.sCasesSlidedr__slider--js', {
 		slidesPerView: 1,
 		// freeMode: true,

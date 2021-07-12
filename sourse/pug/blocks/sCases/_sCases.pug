@@ -6,10 +6,31 @@ mixin sCases(data)
 				h2 КЕЙСЫ
 				h3 Мы собрали наш лучший опыт во многих отраслях
 
-			//- +e.slider--js.swiper-container
-			//- 	.swiper-wrapper
-			//- 		mixin slide(i,title,text)
-			//- 			+e.slide.swiper-slide
-
-			.row
+			+e.thumbWrap
+				+e.sliderThumb--js.swiper-container
+					.swiper-wrapper
+						mixin slideThumb(t)
+							+e.slideBtn.swiper-slide= t
+						+slideThumb('#Продвижение магазина мебели в Европе')
+						+slideThumb('#Торговля женской одеждой')
+						+slideThumb('#PrivateFloor & MyFaktory')
+						+slideThumb('#Сеть клиник в Европе')
+				+e.moreBtn(href="#") #Еще
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i,title,t,link)
+						+e.slide.swiper-slide
+							+pic(`casesBg-${i}.jpg`,'bg','')(class='picture-bg')
+							+e.txtWrap 
+								+e.title!= title 
+								if link
+									+e.link(href= link target="_blank")= link
+								+e.txt!= t
+								+e.btnWrap 
+									+e.btn.btn.btn-primary(href="#") Подробнее
+					+slide(1,'Масштабирование результатов и вывод магазина на новые рынки','Масштабирование результатов и вывод магазина на новые рынки','https://en.privatefloor.com/')
+					+slide(2,'Увеличение рентабельности инвестиций в рекламу (ROAS)','Увеличение рентабельности инвестиций в рекламу (ROAS)','')
+					+slide(3,'E-mail маркетинг для мебельного e-commerce','Увеличение количества и вовлеченности существующих клиентов через e-mail рассылки','https://en.myfaktory.com/about-us/')
+					+slide(4,'PPC и Аналитика для сети клиник','PPC для сети клиник. Увеличение заявок и снижение их стоимости.','')
+				.swiper-pagination.d-lg-none
 	// end sCases

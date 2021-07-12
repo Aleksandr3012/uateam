@@ -1,8 +1,91 @@
 // start .sReviews
 .sReviews {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(90)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(130)};
+	}
+	--sPB: #{rem(100)};
+	// --sTPB: ;
+	margin-bottom: rem(-81);
+
+	background-color: #343c9b;
+	clip-path: polygon(0 80px, 100% 0%, 100% calc(100% - 80px), 0 100%);
+	color: #fff;
+
+	.emoji {
+		display: inline;
+		border: none;
+		box-shadow: none;
+		height: 1em;
+		width: 1em;
+		margin: 0 .07em;
+		vertical-align: -0.1em;
+		padding: 0;
+	}
+
+	&__imgWrap {
+		max-width: rem(92);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	&__name {
+		font-weight: bold;
+	}
+	&__position {
+		font-size: rem(16);
+		margin-bottom: rem(5);
+	}
+	&__link {
+
+	}
+	&__textWrap {
+		position: relative;
+		@include media-breakpoint-down(md) {
+			margin-top: rem(25);
+		}
+		&::before, &::after {
+			content: '“';
+			position: absolute;
+			@extend .mono;
+			color: $primary;
+			font-size: rem(377px);
+			line-height: 1;
+			z-index: -1;
+			margin-top: -.13em;
+			height: 140px;
+		}
+
+		&::before {
+			top: -100px;
+			left: 0;
+			@include media-breakpoint-up(lg) {
+				left: -50px;
+			}
+		}
+
+		&::after {
+			transform: rotate(180deg);
+			right: 0;
+			bottom: -140px;
+			@include media-breakpoint-up(lg) {
+				bottom: -120px;
+				right: -50px;
+			}
+		}
+	}
+	&__row {
+		padding-bottom: rem(40);
+	}
+	&__wrap {
+		padding: 70px 0 100px;
+		@include media-breakpoint-up(lg) {
+			padding: 40px 20px 70px;
+			width: 80%;
+		}
+		margin: auto;
+		position: relative;
+	}
+	&__ {}
 
 
 	@include media-breakpoint-up(sm) {}
