@@ -5,19 +5,19 @@ mixin sCasesSlidedr(data)
 			+b.section-title.text-center 
 				+e.case
 				h2 ПОСМОТРЕТЬ КЕЙСЫ
-				
-			+e.slider--js.swiper-container
-				.swiper-wrapper
-					mixin slide(i, t)
-						+e.slide.swiper-slide
-							+e.wrap(href="#")
-								+pic(`cases-${i}.jpg`,'bg','')(class="picture-bg")
-								+e.text #[span.text-secondary.d-block #]
-									span=t
-					+slide(1,'Торговля женской одеждой')
-					+slide(2,'PrivateFloor & MyFaktory')
-					+slide(3,'Сеть клиник в Европе')
-					+slide(4,'HEX Clothing')
-					+slide(5,'Soft Sell — CRO')
+			+e.sliderWrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i, t)
+							+e.slide.swiper-slide
+								+e.wrap(href="#")
+									+pic(`cases-${i}.jpg`,'bg','')(class="picture-bg")
+									+e.textWrap #[span.text-secondary.d-block #]
+										+e.txt=t
+						+slide(1,'Торговля женской одеждой')
+						+slide(2,'PrivateFloor & MyFaktory')
+						+slide(3,'Сеть клиник в Европе')
+						+slide(4,'HEX Clothing')
+						+slide(5,'Soft Sell — CRO')
 				+arrow
 	// end sCasesSlidedr
