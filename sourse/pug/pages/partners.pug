@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sServiceImplementation/_sServiceImplementation.pug
+include ../blocks/sOptions/_sOptions.pug
+include ../blocks/sServiceAdvantages/_sServiceAdvantages.pug
+include ../blocks/sCasesSlidedr/_sCasesSlidedr.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sForWhom/_sForWhom.pug
+include ../blocks/sHowItWorks/_sHowItWorks.pug
+include ../blocks/sResults/_sResults.pug
+include ../blocks/sWhyWorkWithUs/_sWhyWorkWithUs.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '👉 Разовая настройка контекстной рекламы Google Ads заказать недорого | UAATEAM'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock-inner({
+		img: 'headerBlock-uslugi-bg.jpg'
+	})
+		+b.section-title
+			h1.text-secondary ПАРТНЕРСКАЯ ПРОГРАММА
+			h3 Предлагайте услуги диджитал-маркетинга вашим клиентам и получайте<br>дополнительный доход от партнерских выплат.
+		+e.btnWrap 
+			+e.btn.btn.btn-primary(href="#") Стать партнером
+	+sContent()
+		+b.section-title.text-center
+			h2.ttu ЧТО ТАКОЕ ПАРТНЕРСКАЯ ПРОГРАММА
+		p Партнерская программа UAATEAM — это программа сотрудничества нашего агенства с другими агенствами, компаниями и индивидуальными специалистами. В рамках партнерской программы любое агенство или специалист могут расширить спектр своих предлагаемых услуг, продавая своим клиентам услуги нашего агенства.
+		p Мы предоставляем партнеру все необходимые материалы, которые могут понадобиться для продажи услуг.
+	+sForWhom()
+	+sHowItWorks()
+	+sResults()
+	+sWhyWorkWithUs()
+	+footer().bg-primary
+
+
+

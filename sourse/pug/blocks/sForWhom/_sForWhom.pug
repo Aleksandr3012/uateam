@@ -1,0 +1,18 @@
+mixin sForWhom(data)
+	// start sForWhom
+	+b.SECTION.sForWhom.section#sForWhom&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 ДЛЯ КОГО:
+				
+			.row
+				mixin item(i,title,t)
+					.col-md-4.text-center 
+						+e.imgWrap 
+							+pic(`forWhom-${i}.png`,'','')
+						h3.ttu!= title 
+						p!= t
+				+item(1,'АГЕНСТВА И СТУДИИ','Для агенств, которые хотят предоставлять большее количество услуг, но не обладают необходимыми ресурсами.')
+				+item(2,'ФРИЛАНСЕРЫ','Для фрилансеров, клиентам которых нужны дополнительные услуги в сфере интернет-маркетинга.')
+				+item(3,'УДАЛЕННЫЕ СЕЙЛЗЫ','Для менеджеров по продажам, которые хотят получать дополнительный доход, продавая услуги интернет-маркетинга.')
+	// end sForWhom

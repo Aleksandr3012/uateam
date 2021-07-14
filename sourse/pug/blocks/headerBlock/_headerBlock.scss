@@ -133,6 +133,22 @@
 		}
 	}
 
+	&__btnWrap {
+		text-align: center;
+		padding-top: rem(25);
+		@include media-breakpoint-up(md) {
+			padding-top: rem(50);
+		}
+	}
+
+	&__btn {
+    min-width: rem(198px);
+    min-height: rem(48px);
+    font-size: rem(13px);
+		display: inline-grid;
+		place-items: center;
+	}
+
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}

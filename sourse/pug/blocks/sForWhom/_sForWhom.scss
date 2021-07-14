@@ -1,0 +1,43 @@
+// start .sForWhom
+.sForWhom {
+	--sPT: 0;
+	// --sPB: ;
+	// --sTPB: ;
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(45px);
+		}
+	}
+
+	&__imgWrap {
+		background-color: #f3f3f3;
+		padding: 15px;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		max-width: rem(118);
+		margin-left: auto;
+		margin-right: auto;
+		display: grid;
+		place-items: center;
+
+		img {
+			max-width: 88px;
+		}
+	}
+
+	h3, .h3 {
+		font-weight: bold;
+		margin-bottom: rem(15);
+	}
+
+	p {
+		line-height: calc(25/14);
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sForWhom

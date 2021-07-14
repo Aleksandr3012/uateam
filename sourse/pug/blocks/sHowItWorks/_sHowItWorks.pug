@@ -1,0 +1,18 @@
+mixin sHowItWorks(data)
+	// start sHowItWorks
+	+b.SECTION.sHowItWorks.section#sHowItWorks&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 КАК ЭТО РАБОТАЕТ:
+				
+			.row
+				mixin item(i,t)
+					+e.col.col-md-3.text-center 
+						+e.imgWrap 
+							+pic(`howItWorks-${i}.png`,'','')
+						p!= t
+				+item(1,'Регистрация в партнерской программе UAATEAM')
+				+item(2,'Встреча с нашим менеджером, для обсуждения деталей')
+				+item(3,'Предложение услуг агенства своим клиентам и передача контактов')
+				+item(4,'Получение вознаграждения, после внесения клиентом оплаты')
+	// end sHowItWorks
