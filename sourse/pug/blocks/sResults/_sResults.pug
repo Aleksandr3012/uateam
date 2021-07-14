@@ -2,8 +2,17 @@ mixin sResults(data)
 	// start sResults
 	+b.SECTION.sResults.section#sResults&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sResults
+			+b.section-title.text-center
+				h2 ПАРТНЕРСКАЯ ПРОГРАММА В ЦИФРАХ
 				
 			.row
+				mixin item(n,t)
+					+e.col.col-6.col-md-3
+						+e.more Более
+						+e.num= n 
+						+e.txt= t
+				+item('25%','Выплата за приведенный проект')
+				+item('18','Различных услуг')
+				+item('$300','Минимальная стоимость услуг агентства')
+				+item('$75','Минимальная выплата')
 	// end sResults

@@ -9,9 +9,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	--sPT: calc(#{rem(40)} + var(--header-height));
+	--sPT: calc(#{rem(40)});
 	@include media-breakpoint-up(lg) {
-		--sPT: calc(#{rem(110)} + var(--header-height));
+		--sPT: calc(#{rem(110)});
 		
 	}
 

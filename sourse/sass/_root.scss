@@ -8,9 +8,9 @@
 		--sTPB: #{rem(40)};
 	}
 
-	--header-height: #{rem(109)};
+	--header-height: #{rem(80)};
 	@include media-breakpoint-up(xl) {
-		--header-height: #{rem(126)};
+		--header-height: #{rem(125)};
 	}
 
 	--sPT: #{rem(80 / 2)};

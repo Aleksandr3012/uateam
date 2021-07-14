@@ -1,0 +1,46 @@
+// start .sSoc
+.sSoc {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: 1.2em;
+	padding-bottom: calc(var(--sPB) * 1.5);
+	position: relative;
+
+	&__decor {
+		position: absolute;
+    color: #eef1f3;
+    font-size: 300px;
+    font-weight: 700;
+    line-height: 1;
+    z-index: -1;
+    left: 50%;
+    top: -.25em;
+    transform: translateX(-50%);
+		font-size: 120px;
+		@include media-breakpoint-up(md) {
+			font-size: 430px;
+		}
+	}
+
+	h2 {
+
+		&::before {
+			content: '';
+			display: inline-block;
+			margin-left: 10px;
+			width: 50px;
+			height: 6px;
+			color: $primary;
+		}
+	}
+
+	.soc {
+		justify-content: center;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSoc

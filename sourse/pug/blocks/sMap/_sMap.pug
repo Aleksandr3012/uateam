@@ -1,0 +1,38 @@
+mixin sMap(data)
+	// start sMap
+	+b.sMap.section#sMap&attributes(attributes)
+		.container
+			.row
+				.col-md-7 
+					+e.mapWrap
+						a.dg-widget-link(href='http://2gis.ua/kharkov/firm/70000001032765386/center/36.246170997619636,49.98066752774421/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap')
+							| Посмотреть
+							| на карте Харькова
+						.dg-widget-link
+							a(href='http://2gis.ua/kharkov/center/36.246164,49.98049/zoom/16/routeTab/rsType/bus/to/36.246164,49.98049╎Ukrainian Advertising Agency, компания?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route')
+								| Найти
+								| проезд до Ukrainian Advertising Agency, компания
+						script(charset='utf-8' src='https://widgets.2gis.com/js/DGWidgetLoader.js')
+						script(defer='' charset='utf-8').
+							new DGWidgetLoader({
+							"width": 640,
+							"height": 777,
+							"borderColor": "#a3a3a3",
+							"pos": {"lat": 49.98066752774421, "lon": 36.246170997619636, "zoom": 16},
+							"opt": {"city": "kharkov"},
+							"org": [{"id": "70000001032765386"}]
+							});
+						noscript(style='color:#c00;font-size:16px;font-weight:bold;')
+							| Виджет карты использует JavaScript.
+							| Включите его в настройках вашего браузера.
+					
+				.col.text-end
+					+e.textWrap
+						+e.title Связаться 
+							br
+							| с нами:
+						+e.tel(href="tel:+38(066)1769949") +38 (066) 176 99 49
+						p skype: estdex
+						+e.mailWrap
+							+e.mail(href='maito:a@uaateam.agency') a@uaateam.agency
+	// end sMap

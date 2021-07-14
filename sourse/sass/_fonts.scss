@@ -1,5 +1,5 @@
 $default-font: "GothamPro";
-$mono: "GothamPro";
+$mono: "ProximaNova";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -9,6 +9,7 @@ $file-format: woff2;
 
 @include font-face ($default-font, $addr + "GothamPro", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GothamPro-Light", 300, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GothamPro-Medium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GothamPro-Bold", bold, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GothamPro-Black", 900, $file-formats: $file-format);
 @include font-face ($mono, $addr + "ProximaNova-Regular", $file-formats: $file-format);

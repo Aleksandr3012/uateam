@@ -2,8 +2,24 @@ mixin sWhyWorkWithUs(data)
 	// start sWhyWorkWithUs
 	+b.SECTION.sWhyWorkWithUs.section#sWhyWorkWithUs&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sWhyWorkWithUs
+			+b.section-title.text-center
+				h2 ПОЧЕМУ СТОИТ С НАМИ РАБОТАТЬ:
+
 				
 			.row
+				mixin item(i,title,l1,l2,l3)
+					.col-lg-4 
+						+e.item
+							+e.imgWrap 
+								+pic(`workWhithUs-${i}.png`,'','')
+							+e.title= title 
+							ul 
+								li= l1
+								li= l2
+								li= l3
+				+item('1','НАША КОМАНДА','Агентство со статусом Google Premier Partner','Агентство со статусом Facebook Marketing Patner','Работаем с клиентами по всему миру')
+				+item('2','ПОДХОД','Работаем с долгосрочными и разовыми проектами','Над каждым проектом работает команда из нескольких человек','Кадждому клиенту предоставляется персональный менеджер')
+				+item('3','ФИНАНСОВАЯ ЧАСТЬ','Выплаты сразу после внесения клиентом оплаты','Минимальная стоимость услуг от $300','Растущий процент вознаграждения')
+			.text-center 
+				a.btn.btn-primary.sWhyWorkWithUs__btn(href="#") Стать партнером
 	// end sWhyWorkWithUs
