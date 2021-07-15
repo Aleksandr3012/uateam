@@ -84,7 +84,8 @@
 		border-radius: rem(12px);
 		max-width: rem(417);
 		background: $secondary;
-
+		padding: 39px 17px 17px;
+		margin-bottom: rem(65);
 		@include media-breakpoint-up(md) {
 			min-height: rem(269px);
 			margin-bottom: rem(98px);
@@ -96,6 +97,8 @@
 			position: absolute;
 			top: -1px;
 			right: -1px;
+			width: 168px;
+			height: 23px;
 			@include media-breakpoint-up(sm) {
 				width: 233px;
 				height: 40px;
@@ -169,6 +172,9 @@
 	}
 	&__block {
 		font-size: rem(16px);
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(60);
+		}
 		@include media-breakpoint-up(sm) {
 			padding: rem(30px);
 			border: 4px solid #f4f4f4;
