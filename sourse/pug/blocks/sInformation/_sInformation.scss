@@ -4,9 +4,7 @@
 	// --sPB: ;
 	// --sTPB: ;
 
-	@include media-breakpoint-up(lg) {
-		margin-top: rem(-46);
-	}
+	margin-top: rem(-25);
 
 	&__place {
 		position: relative;
@@ -23,6 +21,8 @@
 			transform: rotate(0deg);
 			background: url('../img/@2x/place-ic-bg.png') no-repeat 0 0;
 			z-index: 100;
+			z-index: -1;
+
 			@include media-breakpoint-up(xl) {
 				width: rem(96px);
 				left: rem(-60px);
@@ -34,10 +34,11 @@
 		flex-direction: column;
 		justify-content: center;
 
+
 		i {
 			content: ' ';
 			position: absolute;
-			left: 104px;
+			left: 14px;
 			top: -25px;
 			width: 49px;
 			height: 62px;
@@ -51,8 +52,9 @@
 		&::after {
 			content: ' ';
 			position: absolute;
-			left: 124px;
-			top: 42px;
+			left: 33px;
+			top: 45px;
+			z-index: 5;
 			width: 12px;
 			height: 12px;
 			border-radius: 50%;
@@ -81,6 +83,7 @@
 		min-height: rem(189px);
 		border-radius: rem(12px);
 		max-width: rem(417);
+		background: $secondary;
 
 		@include media-breakpoint-up(md) {
 			min-height: rem(269px);
@@ -97,14 +100,108 @@
 				width: 233px;
 				height: 40px;
 			}
+			background-image: url('../img/@2x/folder-cotn.jpg');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+		line-height: 1;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			position: relative;
+			font-size: rem(13);
+			padding-left: rem(19);
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(18);
+				padding-left: rem(28);
+				margin-bottom: rem(20);
+			}
+
+			&::before {
+				content: ' ';
+				position: absolute;
+				left: 0;
+				top: 9px;
+				width: 13px;
+				height: 2px;
+				background: #ffffff;
+				@include media-breakpoint-up(sm) {
+					top: 9px;
+					width: 18px;
+					height: 3px;
+				}
+			}
 		}
 	}
 
 	&__folderTitle {
-
+		font-weight: bold;
+		font-size: rem(20);
+		margin-bottom: rem(11);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(22);
+		}
 	}
-	&__link {}
-	&__block {}
+	&__link {
+		display: inline-block;
+		font-weight: bold;
+		font-size: rem(20);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(24);
+		}
+		text-decoration: none;
+		color: #000 !important;
+		border-bottom: solid 4px $secondary;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+
+	h2, .h2 {
+		@include media-breakpoint-up(lg) {
+			margin-left: -33px;
+		}
+	}
+	&__block {
+		font-size: rem(16px);
+		@include media-breakpoint-up(sm) {
+			padding: rem(30px);
+			border: 4px solid #f4f4f4;
+		}
+		
+		@include media-breakpoint-up(lg) {
+			padding: rem(50px) rem(65px) rem(47px);
+			font-size: rem(20px);
+			max-width: rem(500px);
+			margin-bottom: rem(54px);
+			margin-left: auto;
+
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: rem(600);
+		}
+
+		h3, .h3 {
+			line-height: calc(36 / 20);
+			font-weight: normal;
+		}
+	}
+
+	h3, .h3 {
+		font-weight: normal;
+		letter-spacing: .2px;
+		font-size: rem(20);
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(24);
+			margin-bottom: rem(37);
+		}
+	}
 
 
 	@include media-breakpoint-up(sm) {}

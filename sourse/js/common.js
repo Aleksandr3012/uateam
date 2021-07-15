@@ -371,6 +371,7 @@ function eventHandler() {
 		freeMode: true,
 		watchSlidesVisibility: true,
 	});
+
 	var casesSlider = new Swiper(".sCases__slider--js", {
 		spaceBetween: 0,
 		pagination: {
@@ -411,6 +412,23 @@ function eventHandler() {
 			768: {
 				slidesPerView: 2,
 				slidesPerColumn: 2,
+			}
+		},
+		pagination: {
+			el: '.sServises .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+
+		},
+	});
+
+	const instrumentsSlider = new Swiper('.sInstruments__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 0,
+		breakpoints: {
+			992: {
+				spaceBetween: 106,
 			}
 		},
 		pagination: {

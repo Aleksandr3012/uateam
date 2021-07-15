@@ -1,8 +1,31 @@
 // start .sInstruments
 .sInstruments {
-	// --sPT: ;
-	// --sPB: ;
-	// --sTPB: ;
+
+	--sTPB: #{rem(62)};
+	--sPB: #{rem(70)};
+	--sPT: #{rem(120)};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(110)};
+		--sPT: #{rem(150)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(128)};
+		--sPB: #{rem(100)};
+		--sPT: #{rem(190)};
+	}
+
+	@include media-breakpoint-up(xl) {
+		--sPB: #{rem(190)};
+	}
+
+	background: #343c9b;
+	color: #fff;
+	clip-path: polygon(0px 9px, 100% 118px, 100% 78.04%, 0px 100%);
+
+	h2, .h2 {
+		text-transform: uppercase;
+		letter-spacing: .3px;
+	}
 
 
 	@include media-breakpoint-up(sm) {}
