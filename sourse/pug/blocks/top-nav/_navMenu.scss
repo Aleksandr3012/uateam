@@ -1,14 +1,16 @@
 .menu{
-	display: flex;
-	list-style: none;
-	@include roww(3px, m);
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		flex-wrap: wrap;
+		@include roww(3px, m);
+	}
 	@include media-breakpoint-up(xl) {
 		@include roww(20px, m);
 	}
+	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	flex-wrap: wrap;
 	li{
 		padding: 0;
 		position: relative;
@@ -17,7 +19,9 @@
 	.menu-link {
 		@include mt;
 		display: block;
-		text-align: center;
+		@include media-breakpoint-up(lg) {
+			text-align: center;
+		}
 		padding: rem(10) rem(5);
 		font-size: rem(12);
 		@include media-breakpoint-up(xl) {
@@ -29,43 +33,54 @@
 		border-bottom: solid 5px transparent;
 
 		&:hover {
-			color: $primary;
-			border-bottom-color: $primary;
+			@include media-breakpoint-up(lg) {
+				color: $primary;
+				border-bottom-color: $primary;
+			}
 		}
 	}
 
 	.menu-item {
 		&:hover {
 			.sub-menu {
-				opacity: 1;
-				pointer-events: all;
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+					pointer-events: all;
+				}
 			}
 		}
 	}
 
 	.sub-menu {
-		opacity: 0;
-		pointer-events: none;
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 101%;
+			left: 0;
+			z-index: 20;
+			width: 140px;
+			background: #ffffff;
+			border-bottom: 1px solid #202224;
+			opacity: 0;
+			background-color: #fff;
+			pointer-events: none;
+		}
 		@include mt;
-		background-color: #fff;
-		position: absolute;
-		top: 101%;
-		left: 0;
-		z-index: 20;
-		width: 140px;
-		background: #ffffff;
 		padding: 10px 0;
-		border-bottom: 1px solid #202224;
 		
 
 		.menu-link {
-			color: #000000 !important;
+			color: #fff;
+			@include media-breakpoint-up(lg) {
+				color: #000000 !important;
+			}
 			padding: 9px 0 9px 13px;
 			font-size: 11px;
 			text-align: left;
 
 			&:hover {
-				background: #fccb00;
+				@include media-breakpoint-up(lg) {
+					background: #fccb00;
+				}
 			}
 		}
 	}

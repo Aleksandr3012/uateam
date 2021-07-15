@@ -9,10 +9,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	--sPT: calc(#{rem(40)});
+	--sPT: #{rem(40)};
 	@include media-breakpoint-up(lg) {
-		--sPT: calc(#{rem(110)});
-		
+		--sPT: #{rem(110)};
 	}
 
 	h1, .h1 {
@@ -126,6 +125,8 @@
 		&::before {
 			content: '';
 			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
 			height: 100%;
 			background: #343c9b;
@@ -147,6 +148,21 @@
     font-size: rem(13px);
 		display: inline-grid;
 		place-items: center;
+	}
+
+	&__tag {
+		font-weight: bold;
+		font-size: rem(24);
+		margin-top: auto;
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			bottom: 15%;
+			@include a-cent(x);
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(50);
+		}
 	}
 
 
@@ -185,6 +201,37 @@
 
 		.section-title {
 			margin-right: rem(30);
+		}
+	}
+
+	&-aboutUs {
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(180)};
+			--sPB: #{rem(180)};
+		}
+
+		h3, .h3 {
+			font-weight: 400;
+		}
+	}
+
+	&-casesInner {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(200)};
+			min-height: 605px;
+		}
+		@include media-breakpoint-up(xl) {
+			min-height: 835px;
+		}
+
+		.container {
+			position: static;
+		}
+
+
+		h1, .h1 {
+
 		}
 	}
 }

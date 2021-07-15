@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/sVacancies/_sVacancies.pug
+include ../blocks/sOurGoals/_sOurGoals.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sWhatWeOffer/_sWhatWeOffer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Наша Команда #UAATEAM | UAATEAM '
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock-inner({
+		img: 'headerBlock-about.jpg'
+	}).headerBlock-aboutUs
+		+b.section-title
+			h1 У НАС РАЗНЫЙ ХАРАКТЕР
+				.text-secondary НО ОДНА ЦЕЛЬ
+		h3 Превосходный микс скилов и профессионализма –<br> лучшая формула для того, чтобы изменить рынок<br> и сделать качественный продукт.
+	+sOurGoals()
+	+sTeam-inner().background-blue
+	+sInstagram()
+	+footer().bg-primary
+
+
+

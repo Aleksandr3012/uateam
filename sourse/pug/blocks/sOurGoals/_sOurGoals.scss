@@ -1,0 +1,38 @@
+// start .sOurGoals
+.sOurGoals {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	position: relative;
+
+	&__decor {
+		@include a-cent1(x);
+		top: 0;
+		z-index: -1;
+	}
+
+	&__wrap {
+		max-width: rem(600);
+		margin-left: auto;
+	}
+
+	.accardion {
+		&__header {
+			cursor: initial;
+			color: #31312d;
+		}
+
+		&__title {
+			text-transform: inherit;
+			@include media-breakpoint-up(md) {
+				font-size: rem(20);
+			}
+		}
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOurGoals

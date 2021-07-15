@@ -61,8 +61,11 @@
 	}
 
 	.btn {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-only(lg) {
 			padding: 5px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(10) rem(25);
 		}
 	}
 

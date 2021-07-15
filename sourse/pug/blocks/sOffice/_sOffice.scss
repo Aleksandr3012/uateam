@@ -1,0 +1,48 @@
+// start .sOffice
+.sOffice {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(60)};
+	}
+
+	.section-title {
+		text-transform: uppercase;
+		.icon {
+			font-size: rem(60);
+			margin-bottom: rem(15);
+			color: $secondary;
+		}
+	}
+
+	&__wrap {
+		display: block;
+	}
+
+	.swiper-slide-next {
+		.sOffice__wrap {
+			border: 11px solid #ffffff;
+			transform: scale(1.1);
+			box-shadow: rgba(1, 1, 1, 0.17) 0px 7px 17px 4px;
+		}
+	}
+
+	.swiper-pagination {
+		padding-top: rem(50);
+	}
+
+	.swiper-wrapper {
+		align-items: center;
+	}
+
+	&__slider {
+		overflow: visible;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOffice

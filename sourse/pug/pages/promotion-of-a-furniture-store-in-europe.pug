@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/sVacancies/_sVacancies.pug
+include ../blocks/sOurGoals/_sOurGoals.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sWhatWeOffer/_sWhatWeOffer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Кейс E-commerce - проект Продвижение магазина мебели в Европе'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock-inner({
+		img: '1920х1080-4.jpg'
+	}).headerBlock-casesInner
+		+b.section-title
+			h1 ПРОДВИЖЕНИЕ МАГАЗИНА МЕБЕЛИ В ЕВРОПЕ
+		h3.ttu МАСШТАБИРОВАНИЕ РЕЗУЛЬТАТОВ И ВЫВОД МАГАЗИНА НА НОВЫЕ РЫНКИ
+		+e.tag.text-secondary #case
+	+sOurGoals()
+	+sTeam-inner().background-blue
+	+sInstagram()
+	+footer().bg-primary
+
+
+

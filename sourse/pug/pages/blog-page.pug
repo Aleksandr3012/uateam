@@ -9,6 +9,8 @@ include ../blocks/sCases/_sCases.pug
 include ../blocks/sOffer/_sOffer.pug
 include ../blocks/sSoc/_sSoc.pug
 include ../blocks/sMap/_sMap.pug
+include ../blocks/sitebar/_sitebar.pug
+include ../blocks/sBlogInner/_sBlogInner.pug
 
 block variables
 	- let  mainPage= null 
@@ -23,7 +25,13 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-
+	.container
+		.row 
+			.col.order-lg-last 
+				+sitebar
+			.col-lg-7 
+				+sBlogInner
+	+sForm-blue()
 	+footer().bg-primary
 
 

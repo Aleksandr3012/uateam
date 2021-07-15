@@ -422,6 +422,55 @@ function eventHandler() {
 			clickable: true
 		}
 	});
+	const officeSlider = new Swiper('.sOffice__slider--js', {
+		slidesPerView: 2,
+		watchOverflow: true,
+		loop: true,
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 80
+			}
+		},
+		pagination: {
+			el: '.sOffice .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		autoplay: {
+			delay: 4000
+		}
+	});
+
+	function makeDDGroup(qSelecorts) {
+		for (let parentSelect of qSelecorts) {
+			let parent = document.querySelector(parentSelect);
+
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.accardion__header--js');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.accardion__content--js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						} else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.accardion__content--js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			}
+		}
+	}
+
+	makeDDGroup(['.accardion', '.dd-price-js']);
 }
 
 ;

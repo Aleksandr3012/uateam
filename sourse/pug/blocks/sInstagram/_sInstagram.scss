@@ -1,0 +1,27 @@
+// start .sInstagram
+.sInstagram {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(60)};
+	}
+
+	.section-title {
+		.icon {
+			color: $secondary;
+			font-size: rem(60);
+		}
+	}
+
+	&__wrap {
+		display: block;
+		text-align: center;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sInstagram

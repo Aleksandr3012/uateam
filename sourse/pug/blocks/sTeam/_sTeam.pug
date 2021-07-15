@@ -29,3 +29,46 @@ mixin sTeam(data)
 			.text-center 
 				a.btn.btn-outline-secondary.sTeam__btn.d-lg-none(href="about-us") Подробнее
 	// end sTeam
+
+mixin sTeam-inner(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		.container
+			+e.titleWrap
+				+b.section-title
+					h2 НАША КОМАНДА
+					h3 Команда профессионалов всегда готова помочь в улучшении вашего бизнеса
+				a.btn.btn-outline-secondary.sTeam__btn.d-none.d-lg-block(href="about-us") Подробнее
+				
+			.row
+				mixin card(i,name,position,soc)
+					+e.col.col-6.col-lg-3
+						+e.personCard
+							+e.imgWrap 
+								+pic(`team-${i}.jpg`,'','')
+								+e.name!= name
+							+e.position= position
+							if soc 
+								+e.socWrap 
+									+e.soc(href="#" target="_blank")
+										+icon('fb')
+									+e.soc(href="#" target="_blank")
+										+icon('instagram')
+				+card('1',`Макс<br>ЗАХОЖИЙ`,'CMO / Co-owner','soc')
+				+card('2','АЛЕКСАНДР<br>ПРОКОФЬЕВ','CEO / Co-owner','soc')
+				+card('4','ДЕНИС<br>ЧУХНОВ','COO')
+				+card('5','МАКС<br>СУЩЕК','Head of BDSM Dept')
+				+card('3','ИГОРЬ<br>ПАЛАМАРЧУК','CTO')
+				+card('6','СЕРГЕЙ<br>ПЕРЕДЕРИЙ','Head of SEO Department')
+				+card('7','ННА<br>АЛЕКСЕЕНКО','English Teacher')
+				.col-6.col-lg-3.align-self-end.text-center
+					a.btn.btn-outline-secondary.sTeam__btn.sTeam__btn--width200(href="about-us") Еще
+			+e.block 
+				.row.align-items-center
+					.col-lg-auto 
+						+e.imgPlus 
+							+pic('plus-img-primary.png','','')
+					.col-lg 
+						h3 Хочешь стать частью нашей команды?
+					.col-lg-auto
+						a.btn.btn-secondary.sTeam__btnVacancies(href="#") Просмотреть вакансии

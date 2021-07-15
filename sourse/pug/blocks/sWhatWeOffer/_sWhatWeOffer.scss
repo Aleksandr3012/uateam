@@ -1,0 +1,97 @@
+// start .sWhatWeOffer
+.sWhatWeOffer {
+	--sPT: #{rem(100)};
+	--sPB: #{rem(100)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(60)};
+	}
+
+	background-color: #343c9b;
+	overflow: hidden;
+	clip-path: polygon(0 0, 100% 80px, 100% 100%, 0 100%);
+	position: relative;
+	min-height: rem(1000);
+	display: flex;
+
+	h2, .h2 {
+		color: #31312d;
+		text-transform: uppercase;
+	}
+
+	&__left {
+		width: 260px;
+		@include media-breakpoint-up(xl) {
+			width: 360px;
+		}
+		background-color: #1b1d1f;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	&__leftTxt {
+		color: #343c9b;
+		font-size: rem(110px);
+		font-weight: 700;
+		letter-spacing: 4px;
+		position: absolute;
+		top: 43%;
+		right: 70px;
+		transform: rotate(-90deg) translate(50%, 0);
+		transform-origin: right center;
+	}
+
+	&__main {
+		padding-left: 40px;
+		@include media-breakpoint-up(lg) {
+			margin-left: 320px;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-left: 450px;
+		}
+		flex: 1 1 auto;
+	}
+
+	.row {
+		@include roww(150px);
+	}
+
+	&__col {
+		color: #fff;
+		padding-top: rem(25);
+		padding-bottom: rem(25);
+		position: relative;
+
+		&::before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		z-index: -1;
+		background: url(../img/@2x/plus-img-primary.png) no-repeat 50% 0;
+		background-size: cover;
+		width: 102px;
+		height: 102px;
+		left: 10px;
+		@include media-breakpoint-up(md) {
+			left: -10px;
+			top: -15px;
+			}
+		}
+	}
+
+	&__title {
+		max-width: rem(200);
+		font-size: rem(24);
+		margin-bottom: rem(16);
+		font-weight: bold;
+		line-height: calc(30.7 / 24);
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWhatWeOffer

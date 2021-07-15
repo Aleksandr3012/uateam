@@ -1,0 +1,20 @@
+mixin sOurGoals(data)
+	// start sOurGoals
+	+b.SECTION.sOurGoals.section#sOurGoals&attributes(attributes)
+		+e.decor 
+			+pic('icon-targeting.png')
+		.container
+			+b.section-title.text-center
+				h2 НАШИ ЦЕЛИ
+				
+			+e.wrap
+				+b.accardion
+					mixin item(count,headerTxt)
+						+e.item
+							+e.header
+								+e.count= count
+								+e.title!= headerTxt 
+					+item('01','Изменить рынок digital в Украине')
+					+item('02','Развить культуру отношений между клиентом и агентством')
+					+item('03','Сделать рынок интернет-маркетинга насыщенным и профессиональным')
+	// end sOurGoals

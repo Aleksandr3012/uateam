@@ -13,6 +13,8 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
+			+e.tel(href="tel:+38(066)1769949") +38 (066) 176 99 49
+			+e.btn.btn.btn-outline-secondary(href='#') Отправить заявку
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -28,7 +30,7 @@ mixin top-nav()
 				.col-auto.d-none.d-lg-block
 					+e.tel(href="tel:+380661769949") +38 (066) 176 99 49
 				.col-auto.d-none.d-lg-block
-					+e.btn.btn.btn-outline-secondary.link-modal-js(href="#") Отправить заявку
+					+e.btn.btn.btn-outline-secondary.link-modal-js(href="#modal-call") Отправить заявку
 				.col-auto.d-none.d-lg-block
 					+e.row.row 
 						.col 

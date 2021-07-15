@@ -1,0 +1,72 @@
+mixin sitebar(data)
+	// start sitebar
+	+b.sitebar.section#sitebar&attributes(attributes)
+		.row.justify-content-between.d-lg-none 
+			.col-auto 
+				+share
+			.col-auto
+				+e.category(href="#")
+					+icon('settings')
+					span Категории
+		+e.main.d-none.d-lg-block
+			+e.UL.nav 
+				li
+					+e.navLink.active(href="#") Все
+				li
+					+e.navLink(href="#") Manuals
+				li
+					+e.navLink(href="#") SММ
+				li
+					+e.navLink(href="#") PPC
+				li
+					+e.navLink(href="#") Веб-аналитика
+				li
+					+e.navLink(href="#") Facebook
+			+e.wrap
+				h6 YOU WILL BE INTERESTED IN:
+				+e.linkWrap 
+					+e.A.link(href="#") SMM-тренды 2021
+				+e.linkWrap 
+					+e.A.link(href="#") Реклама на Pinterest - детальный гайд по запуску
+			+e.wrap
+				h6 МЫ В СОЦИАЛЬНЫХ СЕТЯХ:
+				+soc()
+			+e.wrap
+				h6 ЧАСТО ПРОСМАТРИВАЕМОЕ:
+				+e.linkWrap 
+					+e.A.link(href="#") Новый фактор ранжирования от Google в 2021 году: что нужно знать
+				+e.linkWrap 
+					+e.A.link(href="#") Стратегия рекламы в соцсетях в сезон праздников
+				+e.linkWrap 
+					+e.A.link(href="#") Опасен ли ссылочный взрыв для вашего сайта
+				+e.linkWrap 
+					+e.A.link(href="#") Чем отличаются анкорные и безанкорные ссылки
+			+e.wrap
+				+e.imgBg 
+					+pic('youtube.png','','')
+				h6 СМОТРИ НАС НА YOUTUBE:
+				+e.youtubeLink(href="https://www.youtube.com/watch?v=5oilOllVU04" target="_blank")
+					img.res-i(src="https://i.ytimg.com/vi/5oilOllVU04/hqdefault.jpg", alt="" loading="lazy")
+					+e.youtubeTime 28:01
+				+e.youtubeLink(href="https://www.youtube.com/watch?v=_eeH1-ox6OI" target="_blank")
+					img.res-i(src="https://i.ytimg.com/vi/_eeH1-ox6OI/hqdefault.jpg", alt="" loading="lazy")
+					+e.youtubeTime 52:08
+
+
+	// end sitebar
+
+
+mixin share
+	+b.share&attributes(attributes)
+		+e.btn
+			+icon('share')
+			span Share
+		ul 
+			mixin li(icon)
+				li
+					a(href="#") 
+						+icon(icon)
+			+li('fb')
+			+li('twitter')
+			+li('linkedin')
+			+li('rss')

@@ -13,5 +13,20 @@ mixin sForm()
 					+input('Сайт','text')(required)
 					.text-end
 						+e.btn.btn.btn-secondary(type="submit") Начать 
-			.row
+
 	// end sForm
+
+mixin sForm-blue()
+	// start sForm
+	+b.SECTION.sForm--blue.section#sForm&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title
+					h2 НАЧАТЬ РАБОТУ C UAATEAM
+				+form-wrap 
+					+input('Сообщение','textarea')
+					+input('Имя','text')(required)
+					+input('Email','email')(required)
+					.recaptcha
+					.text-end
+						+e.btn.btn.btn-secondary(type="submit") Оставить комментарий

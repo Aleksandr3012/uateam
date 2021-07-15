@@ -46,6 +46,20 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&--blue {
+		background-color: #343c9b;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(125)};
+			--sPB: #{rem(125)};
+		}
+
+		.sForm__inner {
+			max-width: 790px;
+			margin-left: 0;
+		}
+
+	} 
+
 } // end.sForm
 
 .background-dark {
@@ -57,28 +71,9 @@
 
 .form-wrap {
 	&__input-wrap {
-		position: relative;
 		margin-bottom: rem(21);
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(37);
-		}
-		&::before {
-			content: '';
-			position: absolute;
-			right: 22px;
-			top: 20px;
-			width: 15px;
-			height: 25px;
-			background: url('../img/sprite.png') -1088px -11px no-repeat;
-			z-index: 100;
-			opacity: 0;
-			@include mt(.1s);
-		}
-
-		&:hover {
-			&::before {
-				opacity: 1;
-			}
 		}
 	}
 
@@ -96,7 +91,14 @@
 		&:focus {
 			background: #2b2a2b;
 		}
+
+		&:hover {
+			&:required {
+				background: url('../img/lightning.png') 97% center no-repeat;
+			}
+		}
 	}
+
 
 	&__btn {
 		border-radius: rem(12);
@@ -110,5 +112,9 @@
 		@include media-breakpoint-down(md) {
 			width: 100%;
 		}
+	}
+
+	textarea {
+		height: 180px;
 	}
 }
