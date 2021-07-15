@@ -47,8 +47,6 @@ const JSCCommon = {
 
 		});
 
-		// $(link).fancybox({
-		// });
 
 		$(".modal-close-js").click(function () {
 			fancybox.close();
@@ -426,11 +424,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 0,
-		breakpoints: {
-			992: {
-				spaceBetween: 106,
-			}
-		},
 		pagination: {
 			el: '.sServises .swiper-pagination',
 			type: 'bullets',

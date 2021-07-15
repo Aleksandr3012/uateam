@@ -41,9 +41,7 @@ const JSCCommon = {
 			// 	root.style.setProperty('--spacing-end', null);
 			// },
 
-		}); // $(link).fancybox({
-		// });
-
+		});
 		$(".modal-close-js").click(function () {
 			fancybox.close();
 		}); // fancybox.defaults.backFocus = false;
@@ -425,11 +423,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 0,
-		breakpoints: {
-			992: {
-				spaceBetween: 106
-			}
-		},
 		pagination: {
 			el: '.sServises .swiper-pagination',
 			type: 'bullets',
