@@ -1,4 +1,4 @@
-mixin sCasesSlidedr(data)
+mixin sCasesSlidedr(btn)
 	// start sCasesSlidedr
 	+b.SECTION.sCasesSlidedr.section#sCasesSlidedr&attributes(attributes)
 		.container
@@ -9,7 +9,7 @@ mixin sCasesSlidedr(data)
 				+e.slider--js.swiper-container
 					.swiper-wrapper
 						mixin slide(i, t)
-							+e.slide.swiper-slide
+							+e.slide.swiper-slide&attributes(attributes)
 								+e.wrap(href="#")
 									+pic(`cases-${i}.jpg`,'bg','')(class="picture-bg")
 									+e.textWrap #[span.text-secondary.d-block #]
@@ -17,9 +17,10 @@ mixin sCasesSlidedr(data)
 						+slide(1,'Торговля женской одеждой')
 						+slide(2,'PrivateFloor & MyFaktory')
 						+slide(3,'Сеть клиник в Европе')
-						+slide(4,'HEX Clothing')
+						+slide(4,'HEX Clothing').visited-link
 						+slide(5,'Soft Sell — CRO')
 				+arrow
-			+e.btnWrap 
-				a.btn.btn-outline-secondary.sCasesSlidedr__btn(href="#") Обсудить задачу
+			if btn
+				+e.btnWrap 
+					a.btn.btn-outline-secondary.sCasesSlidedr__btn(href="#") Обсудить задачу
 	// end sCasesSlidedr

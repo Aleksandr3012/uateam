@@ -385,9 +385,8 @@ function eventHandler() {
 
 	const sCasesSlided = new Swiper('.sCasesSlidedr__slider--js', {
 		slidesPerView: 1,
-		// freeMode: true,
+		loop: true,
 		loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 		breakpoints: {

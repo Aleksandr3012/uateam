@@ -1,0 +1,28 @@
+mixin sInformation(data)
+	// start sInformation
+	+b.sInformation.section#sInformation&attributes(attributes)
+		.container
+				
+			.row
+				.col-lg-6 
+					+e.place 
+						+e.placeIcon
+							i
+						+e.placeTxt Размещение в странах ЕС
+					+e.folder 
+						+e.folderTitle Особенности проекта:
+						ul 
+							li Высокая конкуренция с такими же товарами;
+							li Продвижение на английском языке для пользователей, говорящих на другом языке;
+							li Ограничения по использованию некоторых брендов;
+							li Достаточно высокий плановый показатель рентабельности при необходимости постоянного повышения продаж.
+					.h3 Работы стартовали
+						strong.d-block Август 2020
+					.h3 Сайт:
+					+e.link(href='https://en.privatefloor.com/' target='_blank') en.privatefloor.com
+
+				.col-lg-6 
+					+e.block 
+						h2 #[span.text-secondary #] ЗАДАЧИ
+						.h3 Повышение ROAS до планового показателя; Масштабирование результатов без снижения рентабельности; Вывод магазина на новые рынки.
+	// end sInformation

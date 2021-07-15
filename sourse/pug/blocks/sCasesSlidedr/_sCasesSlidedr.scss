@@ -78,6 +78,10 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sCasesSlidedr
 
+.visited-link {
+	opacity: .6;
+}
+
 .swiper-button {
 	&-hand {
 		display: grid;

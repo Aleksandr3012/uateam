@@ -1,0 +1,114 @@
+// start .sInformation
+.sInformation {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(-46);
+	}
+
+	&__place {
+		position: relative;
+		&::before {
+			content: ' ';
+			position: absolute;
+			width: rem(60px);
+			height: rem(109px);
+			left: rem(-15px);
+			top: rem(-55px);
+			border: none;
+			border-radius: 0;
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			background: url('../img/@2x/place-ic-bg.png') no-repeat 0 0;
+			z-index: 100;
+			@include media-breakpoint-up(xl) {
+				width: rem(96px);
+				left: rem(-60px);
+			}
+		}
+	}
+	&__placeIcon {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+
+		i {
+			content: ' ';
+			position: absolute;
+			left: 104px;
+			top: -25px;
+			width: 49px;
+			height: 62px;
+			background: url('../img/sprite.png') -933px -11px no-repeat;
+			@include media-breakpoint-up(lg) {
+				left: 33px;
+				top: -28px;
+			}
+		}
+
+		&::after {
+			content: ' ';
+			position: absolute;
+			left: 124px;
+			top: 42px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #f6d20a;
+			@include media-breakpoint-up(lg) {
+				top: 40px;
+				left: 52px;
+			}
+		}
+	}
+
+	&__placeTxt {
+		line-height: 1;
+		font-size: rem(28);
+		margin-bottom: rem(72);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(30);
+			margin-bottom: rem(90);
+		}
+		margin-left: rem(80);
+	}
+
+	&__folder {
+		position: relative;
+		overflow: hidden;
+		min-height: rem(189px);
+		border-radius: rem(12px);
+		max-width: rem(417);
+
+		@include media-breakpoint-up(md) {
+			min-height: rem(269px);
+			margin-bottom: rem(98px);
+			padding: rem(58px) rem(26px) rem(17px);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			@include media-breakpoint-up(sm) {
+				width: 233px;
+				height: 40px;
+			}
+		}
+	}
+
+	&__folderTitle {
+
+	}
+	&__link {}
+	&__block {}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sInformation

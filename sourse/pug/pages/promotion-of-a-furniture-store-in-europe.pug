@@ -4,13 +4,13 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sServises/_sServises.pug
-include ../blocks/sTeam/_sTeam.pug
-include ../blocks/sCases/_sCases.pug
+include ../blocks/sInstruments/_sInstruments.pug
+include ../blocks/sCasesSlidedr/_sCasesSlidedr.pug
 include ../blocks/sOffer/_sOffer.pug
 include ../blocks/sVacancies/_sVacancies.pug
-include ../blocks/sOurGoals/_sOurGoals.pug
+include ../blocks/sInformation/_sInformation.pug
 include ../blocks/sInstagram/_sInstagram.pug
-include ../blocks/sWhatWeOffer/_sWhatWeOffer.pug
+include ../blocks/sResults/_sResults.pug
 
 block variables
 	- let  mainPage= null
@@ -32,9 +32,12 @@ block pagecontent
 			h1 ПРОДВИЖЕНИЕ МАГАЗИНА МЕБЕЛИ В ЕВРОПЕ
 		h3.ttu МАСШТАБИРОВАНИЕ РЕЗУЛЬТАТОВ И ВЫВОД МАГАЗИНА НА НОВЫЕ РЫНКИ
 		+e.tag.text-secondary #case
-	+sOurGoals()
-	+sTeam-inner().background-blue
-	+sInstagram()
+	+sInformation()
+	+sContent()
+	+sInstruments()
+	+sResults()
+	+sCasesSlidedr()
+	+sForm().background-blue
 	+footer().bg-primary
 
 
