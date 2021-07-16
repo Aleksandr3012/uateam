@@ -87,7 +87,10 @@
 		font-size: 12px;
 
 		&--width200 {
-			min-width: rem(200px);
+			min-width: rem(130px);
+			@include media-breakpoint-up(sm) {
+				min-width: rem(200px);
+			}
 		}
 	}
 	&__socWrap {
@@ -107,12 +110,13 @@
 		.icon {
 			font-size: rem(22);
 			color: #f5d20e;
+			@include mt;
 		}
 
 		&:hover {
 			background: #f5d20e;
 
-			.iocon {
+			.icon {
 				color: #000;
 			}
 		}

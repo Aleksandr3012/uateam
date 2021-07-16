@@ -4,13 +4,54 @@ mixin modal()
 
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
 		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			+e.title.form-data.h2.ttu.text-secondary НАЧАТЬ РАБОТУ С #UAATEAM
 
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			+policy()
+			+input('Ваше имя','text')(required)
+			+input('Ваше телефон','tel')(required)
+			+input('Email','email')(required)
+			+input('Сайт','text')(required)
+			+e.subtitle Выберите услугу:
+			+e.service
+				+checkbox('Контекстная реклама')
+				+checkbox('Реклама в соцсетях')
+				+checkbox('Настройка веб-аналитики')
+				+checkbox('SMM стратегия')
+				+checkbox('Динамический ремаркетинг')
+				+checkbox('Аудит рекламных кампаний')
+				+checkbox('Отчет в Google Data Studio')
+				+checkbox('Сквозная аналитика')
+				+checkbox('Google Shopping')
+				+checkbox('Колл-трекинг')
+				+checkbox('SEO аудит')
+				+checkbox('Email маркетинг')
+				+checkbox('SEO оптимизация')
+				+checkbox('SMM продвижение')
+				+checkbox('Комплексное продвижение')
+				+checkbox('Оптимизация конверсии')
+				+checkbox('Консультация')
+			+e.subtitle Предварительный бюджет
+			+e.budgetWrap 
+				+input('','number')
+				+e.SELECT.input.form-control
+					option USD
+					option грн
+			+input('Ваш комментарий','textarea')
+			p.text-end Пожалуйста, заполните поля отмеченные
+				+e.SPAN.molnia
+
+			.text-end
+				+e.BUTTON.btn.btn.btn-secondary(type="submit") Отправить заявку
+			//- +policy()
 	// #modal-call
-	
+	+b.modal-win(id="modal-sentence" class=" " style="display: none" )
+		+form-wrap
+			+e.title.form-data.h2.ttu.text-secondary ПОЛУЧИТЬ СПЕЦПРЕДЛОЖЕНИЕ
+
+			+input('Ваше имя','text')(required)
+			+input('Ваше телефон','tel')(required)
+			+input('Email','email')(required)
+			+input('Сайт','text')(required)
+			+input('Предложение месяца','text')(required)
+			.text-end
+				+e.BUTTON.btn.btn.btn-secondary(type="submit") Отправить заявку
 	// end modals

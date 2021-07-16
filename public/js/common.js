@@ -16,32 +16,34 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = ".link-modal-js";
-		Fancybox.bind(link, {
-			arrows: false,
-			infobar: false,
-			touch: false,
-			type: 'inline',
-			autoFocus: false,
-			keyboard: {
-				CLOSE: "Закрыть",
-				NEXT: "Вперед",
-				PREV: "Назад" // PLAY_START: "Start slideshow",
-				// PLAY_STOP: "Pause slideshow",
-				// FULL_SCREEN: "Full screen",
-				// THUMBS: "Thumbnails",
-				// DOWNLOAD: "Download",
-				// SHARE: "Share",
-				// ZOOM: "Zoom"
+		const link = ".link-modal-js"; // Fancybox.bind(link , {
+		// arrows: false,
+		// infobar: false,
+		// touch: false,
+		// type: 'inline',
+		// autoFocus: false,
+		// keyboard: {
+		// 		CLOSE: "Закрыть",
+		// 		NEXT: "Вперед",
+		// 		PREV: "Назад",
+		// 		// PLAY_START: "Start slideshow",
+		// PLAY_STOP: "Pause slideshow",
+		// FULL_SCREEN: "Full screen",
+		// THUMBS: "Thumbnails",
+		// DOWNLOAD: "Download",
+		// SHARE: "Share",
+		// ZOOM: "Zoom"
+		// }, 
+		// beforeLoad: function () {
+		// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
+		// },
+		// afterClose: function () {
+		// 	root.style.setProperty('--spacing-end', null);
+		// },
+		// });
+		// $(link).fancybox({
+		// });
 
-			} // beforeLoad: function () {
-			// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
-			// },
-			// afterClose: function () {
-			// 	root.style.setProperty('--spacing-end', null);
-			// },
-
-		});
 		$(".modal-close-js").click(function () {
 			fancybox.close();
 		}); // fancybox.defaults.backFocus = false;
@@ -281,6 +283,15 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	}
+
+	$('.sitebar__category--js').on('click', function () {
+		$(this).parents('.sitebar').find('.sitebar__sitebarWrap').addClass('active');
+		$(this).parents('body').addClass('fixed');
+	});
+	$('.sitebar__closeBtn--js').on('click', function () {
+		$(this).parents('.sitebar__sitebarWrap').removeClass('active');
+		$(this).parents('body').removeClass('fixed');
+	});
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');

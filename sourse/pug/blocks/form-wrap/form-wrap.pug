@@ -75,3 +75,9 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin checkbox(t,n='checkbox',typ="checkbox")
+	+b.LABEL.custom-checkbox
+		input(type= typ name= n)&attributes(attributes)
+		+e.SPAN.text
+			+e.SPAN.checkboxTitle= t

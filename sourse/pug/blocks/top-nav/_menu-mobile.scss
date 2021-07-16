@@ -95,8 +95,7 @@ $h: 5px;
 	will-change: transform;
 
 	&__inner {
-		max-width: rem(320);
-		margin: 0 auto;
+
 		padding: rem(20) 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -105,6 +104,11 @@ $h: 5px;
 		@include mt(.3s);
 		transition-delay: .4s;
 		opacity: var(--opacity);
+	}
+
+	&__innerWrap {
+		max-width: rem(320);
+		margin: 0 auto;
 	}
 
 	&.active { 

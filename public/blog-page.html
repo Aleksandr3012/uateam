@@ -15,28 +15,32 @@
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><span class="menu-link">УСЛУГИ</span>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">КОНТЕКСТНАЯ РЕКЛАМА</a></li>
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">SMM ПРОДВИЖЕНИЕ</a></li>
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">SEO</a></li>
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">ВСЕ УСЛУГИ</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><span class="menu-link">КЛИЕНТЫ</span>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">Кейсы</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">НАША КОМАНДА</a></li>
-						<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">блог</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">курсы</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">контакты</a></li>
-					</ul><a class="menu-mobile__tel" href="tel:+38(066)1769949">+38 (066) 176 99 49</a><a class="menu-mobile__btn btn btn-outline-secondary link-modal-js" href="#modal-call">Отправить заявку</a>
+					<div class="menu-mobile__innerWrap">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><span class="menu-link">УСЛУГИ</span>
+								<ul class="sub-menu">
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">КОНТЕКСТНАЯ РЕКЛАМА</a></li>
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">SMM ПРОДВИЖЕНИЕ</a></li>
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">SEO</a></li>
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">ВСЕ УСЛУГИ</a></li>
+								</ul>
+							</li>
+							<li class="menu-item" itemprop="item"><span class="menu-link">КЛИЕНТЫ</span>
+								<ul class="sub-menu">
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">Кейсы</a></li>
+								</ul>
+							</li>
+							<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">НАША КОМАНДА</a></li>
+							<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">блог</a>
+								<ul class="sub-menu">
+									<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">курсы</a></li>
+								</ul>
+							</li>
+							<li class="menu-item" itemprop="item"><a class="menu-link" href="#" itemprop="url">контакты</a></li>
+						</ul><a class="menu-mobile__tel" href="tel:+38(066)1769949">+38 (066) 176 99 49</a>
+						<button class="menu-mobile__btn btn btn-outline-secondary link-modal-js" data-src="#modal-call" data-fancybox="btn-2">Отправить заявку
+						</button>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -74,7 +78,9 @@
 							</div>
 							<div class="col-auto d-none d-lg-block"><a class="top-nav__tel" href="tel:+380661769949">+38 (066) 176 99 49</a>
 							</div>
-							<div class="col-auto d-none d-lg-block"><a class="top-nav__btn btn btn-outline-secondary link-modal-js" href="#modal-call">Отправить заявку</a>
+							<div class="col-auto d-none d-lg-block">
+								<button class="top-nav__btn btn btn-outline-secondary link-modal-js" data-src="#modal-call" data-fancybox="btn-1">Отправить заявку
+								</button>
 							</div>
 							<div class="col-auto d-none d-lg-block">
 								<div class="top-nav__row row"> 
@@ -129,74 +135,80 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-auto"><a class="sitebar__category" href="#">
-									<svg class="icon icon-settings ">
-										<use xlink:href="img/svg/sprite.svg#settings"></use>
-									</svg><span>Категории</span></a>
+								<div class="col-auto">
+									<div class="sitebar__category sitebar__category--js">
+										<svg class="icon icon-settings ">
+											<use xlink:href="img/svg/sprite.svg#settings"></use>
+										</svg><span>Категории</span>
+									</div>
 								</div>
 							</div>
-							<div class="sitebar__main d-none d-lg-block">
-								<ul class="sitebar__nav"> 
-									<li><li><a class="sitebar__navLink active" href="#">Все</a></li>
-									</li>
-									<li><li><a class="sitebar__navLink" href="#">Manuals</a></li>
-									</li>
-									<li><li><a class="sitebar__navLink" href="#">SММ</a></li>
-									</li>
-									<li><li><a class="sitebar__navLink" href="#">PPC</a></li>
-									</li>
-									<li><li><a class="sitebar__navLink" href="#">Веб-аналитика</a></li>
-									</li>
-									<li><li><a class="sitebar__navLink" href="#">Facebook</a></li>
-									</li>
-								</ul>
-								<div class="sitebar__wrap">
-									<h6>YOU WILL BE INTERESTED IN:</h6>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">SMM-тренды 2021</a>
+							<div class="sitebar__sitebarWrap">
+								<div class="sitebar__main">
+									<div class="sitebar__closeBtn sitebar__closeBtn--js d-lg-none"> 
 									</div>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Реклама на Pinterest - детальный гайд по запуску</a>
+									<ul class="sitebar__nav"> 
+										<li><li><a class="sitebar__navLink active" href="#">Все</a></li>
+										</li>
+										<li><li><a class="sitebar__navLink" href="#">Manuals</a></li>
+										</li>
+										<li><li><a class="sitebar__navLink" href="#">SММ</a></li>
+										</li>
+										<li><li><a class="sitebar__navLink" href="#">PPC</a></li>
+										</li>
+										<li><li><a class="sitebar__navLink" href="#">Веб-аналитика</a></li>
+										</li>
+										<li><li><a class="sitebar__navLink" href="#">Facebook</a></li>
+										</li>
+									</ul>
+									<div class="sitebar__wrap">
+										<h6>YOU WILL BE INTERESTED IN:</h6>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">SMM-тренды 2021</a>
+										</div>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Реклама на Pinterest - детальный гайд по запуску</a>
+										</div>
 									</div>
-								</div>
-								<div class="sitebar__wrap">
-									<h6>МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</h6>
-									<div class="soc"><a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-youtube ">
-											<use xlink:href="img/svg/sprite.svg#youtube"></use>
-										</svg></a><a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-fb ">
-											<use xlink:href="img/svg/sprite.svg#fb"></use>
-										</svg></a><a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-instagram ">
-											<use xlink:href="img/svg/sprite.svg#instagram"></use>
-										</svg></a><a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-linkedin ">
-											<use xlink:href="img/svg/sprite.svg#linkedin"></use>
-										</svg></a><a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-rss ">
-											<use xlink:href="img/svg/sprite.svg#rss"></use>
-										</svg></a>
+									<div class="sitebar__wrap">
+										<h6>МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</h6>
+										<div class="soc"><a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-youtube ">
+												<use xlink:href="img/svg/sprite.svg#youtube"></use>
+											</svg></a><a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-fb ">
+												<use xlink:href="img/svg/sprite.svg#fb"></use>
+											</svg></a><a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-instagram ">
+												<use xlink:href="img/svg/sprite.svg#instagram"></use>
+											</svg></a><a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-linkedin ">
+												<use xlink:href="img/svg/sprite.svg#linkedin"></use>
+											</svg></a><a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-rss ">
+												<use xlink:href="img/svg/sprite.svg#rss"></use>
+											</svg></a>
+										</div>
 									</div>
-								</div>
-								<div class="sitebar__wrap">
-									<h6>ЧАСТО ПРОСМАТРИВАЕМОЕ:</h6>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Новый фактор ранжирования от Google в 2021 году: что нужно знать</a>
+									<div class="sitebar__wrap">
+										<h6>ЧАСТО ПРОСМАТРИВАЕМОЕ:</h6>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Новый фактор ранжирования от Google в 2021 году: что нужно знать</a>
+										</div>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Стратегия рекламы в соцсетях в сезон праздников</a>
+										</div>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Опасен ли ссылочный взрыв для вашего сайта</a>
+										</div>
+										<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Чем отличаются анкорные и безанкорные ссылки</a>
+										</div>
 									</div>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Стратегия рекламы в соцсетях в сезон праздников</a>
+									<div class="sitebar__wrap">
+										<div class="sitebar__imgBg d-none d-lg-block">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/youtube.webp"/><img src="img/@2x/youtube.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<h6>СМОТРИ НАС НА YOUTUBE:</h6><a class="sitebar__youtubeLink" href="https://www.youtube.com/watch?v=5oilOllVU04" target="_blank"><img class="res-i" src="https://i.ytimg.com/vi/5oilOllVU04/hqdefault.jpg" alt="" loading="lazy"/><span class="sitebar__youtubeTime">28:01</span></a><a class="sitebar__youtubeLink" href="https://www.youtube.com/watch?v=_eeH1-ox6OI" target="_blank"><img class="res-i" src="https://i.ytimg.com/vi/_eeH1-ox6OI/hqdefault.jpg" alt="" loading="lazy"/><span class="sitebar__youtubeTime">52:08</span></a>
 									</div>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Опасен ли ссылочный взрыв для вашего сайта</a>
-									</div>
-									<div class="sitebar__linkWrap"> <a class="sitebar__link" href="#">Чем отличаются анкорные и безанкорные ссылки</a>
-									</div>
-								</div>
-								<div class="sitebar__wrap">
-									<div class="sitebar__imgBg"> 
-										<!-- picture-->
-										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/youtube.webp"/><img src="img/@2x/youtube.png" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture-->
-									</div>
-									<h6>СМОТРИ НАС НА YOUTUBE:</h6><a class="sitebar__youtubeLink" href="https://www.youtube.com/watch?v=5oilOllVU04" target="_blank"><img class="res-i" src="https://i.ytimg.com/vi/5oilOllVU04/hqdefault.jpg" alt="" loading="lazy"/><span class="sitebar__youtubeTime">28:01</span></a><a class="sitebar__youtubeLink" href="https://www.youtube.com/watch?v=_eeH1-ox6OI" target="_blank"><img class="res-i" src="https://i.ytimg.com/vi/_eeH1-ox6OI/hqdefault.jpg" alt="" loading="lazy"/><span class="sitebar__youtubeTime">52:08</span></a>
 								</div>
 							</div>
 						</div>
@@ -205,168 +217,172 @@
 					<div class="col-lg-7"> 
 						<!-- start sBlogInner-->
 						<section class="sBlogInner section" id="sBlogInner">
-							<div class="container">
-								<div class="sBlogInner__articleImg">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/smm.webp"/><img src="img/@2x/smm.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture-->
-								</div>
-								<div class="row justify-content-between mb-4">
-									<div class="col-auto"> 
-										<div class="share">
-											<div class="share__btn">
-												<svg class="icon icon-share ">
-													<use xlink:href="img/svg/sprite.svg#share"></use>
-												</svg><span>Share</span>
-											</div>
-											<ul> 
-													<li><a href="#"> 
-															<svg class="icon icon-fb ">
-																<use xlink:href="img/svg/sprite.svg#fb"></use>
-															</svg></a></li>
-													<li><a href="#"> 
-															<svg class="icon icon-twitter ">
-																<use xlink:href="img/svg/sprite.svg#twitter"></use>
-															</svg></a></li>
-													<li><a href="#"> 
-															<svg class="icon icon-linkedin ">
-																<use xlink:href="img/svg/sprite.svg#linkedin"></use>
-															</svg></a></li>
-													<li><a href="#"> 
-															<svg class="icon icon-rss ">
-																<use xlink:href="img/svg/sprite.svg#rss"></use>
-															</svg></a></li>
-											</ul>
+							<div class="sBlogInner__articleImg">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/smm.webp"/><img src="img/@2x/smm.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="row justify-content-between mb-4">
+								<div class="col-auto"> 
+									<div class="share d-none d-lg-flex">
+										<div class="share__btn">
+											<svg class="icon icon-share ">
+												<use xlink:href="img/svg/sprite.svg#share"></use>
+											</svg><span>Share</span>
 										</div>
+										<ul> 
+												<li><a href="#"> 
+														<svg class="icon icon-fb ">
+															<use xlink:href="img/svg/sprite.svg#fb"></use>
+														</svg></a></li>
+												<li><a href="#"> 
+														<svg class="icon icon-twitter ">
+															<use xlink:href="img/svg/sprite.svg#twitter"></use>
+														</svg></a></li>
+												<li><a href="#"> 
+														<svg class="icon icon-linkedin ">
+															<use xlink:href="img/svg/sprite.svg#linkedin"></use>
+														</svg></a></li>
+												<li><a href="#"> 
+														<svg class="icon icon-rss ">
+															<use xlink:href="img/svg/sprite.svg#rss"></use>
+														</svg></a></li>
+										</ul>
 									</div>
-									<div class="col-auto">
-										<div class="info">
-											<div class="info__item"> 
-												<svg class="icon icon-eye ">
-													<use xlink:href="img/svg/sprite.svg#eye"></use>
-												</svg><span>188</span>
-											</div>
-											<div class="info__item"> 
-												<svg class="icon icon-comment ">
-													<use xlink:href="img/svg/sprite.svg#comment"></use>
-												</svg><span>0</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sBlogInner__article">
-									<div class="sBlogInner__autor"> 
+									<div class="sBlogInner__autor d-lg-none">
 										<div class="sBlogInner__autorName">Viktoriia Blavitska
 										</div>
 										<div class="sBlogInner__autorAdd">21 июня <span class="text-secondary">|</span> 2021
 										</div>
 									</div>
-									<p>Сегодня Social Media Marketing является одним из самых действенных инструментов в продвижении каждого бизнеса. Миллионы компаний по всему миру в поисках своего профессионального SMM-менеджера. И если Вы думаете, что SMM-щик это тот, кто просто публикует красивые картинки и ставит хэштеги, то вынуждена Вас разочаровать <img alt="" src="img/smile.svg" loading="lazy"/> Это специалист, который работает не только с формированием бренда, позиционированием товаров или услуг, но и аналитикой, бюджетом и рекламными инструментами ключевых соцсетей. Поэтому, чтобы стать профессионалом в этом деле стоит обладать такими обязательными навыками.</p>
-									<div class="h2">БЫТЬ КРЕАТИВНЫМ</div>
-									<p>Начнем мы с очевидного. Основная работа SMM-менеджера заключается в создании интересного контента для продвижения бренда в социальных сетях. Это написание текстов, создание дизайна, фото и видео. Данный творческий процесс в большинстве является время затратным и сложным. Ведь всегда нужно искать новые, интересные идеи. Для новой порции вдохновения советуем заглянуть на такие сайты:</p>
-									<p><a href="http://www.pinterest.com">www.pinterest.com </a>— социальная сеть, в которой можно загружать изображения, делиться ими с подписчиков и самим создавать коллекции шрифтов, постеров, макетов сайтов, шаблонов и прочее</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0.jpg" data-fancybox="image-1">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/pasted-image-0.webp"/><img src="img/@2x/pasted-image-0.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-									<p><a href="http://www.behance.net">www.behance.net</a> — сообщество креативных фотографов, дизайнеров и иллюстраторов со всего мира. Их невероятные портфолио обязательно вдохновят каждого на новые и интересные идеи.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-1.jpg" data-fancybox="image-2">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-1.webp"/><img src="img/@2x/pasted-image-0-1.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-									<p><a href="http://www.niice.co">www.niice.co</a> — поисковая система, которая поможет найти искусство вдохновения для своих проектов или повседневной жизни. Здесь вы можете искать все что угодно, наслаждаться красивым визуалом и наполняться новыми идеями.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-2.jpg" data-fancybox="image-3">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-2.webp"/><img src="img/@2x/pasted-image-0-2.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-									<div class="h2">ПИСАТЬ УВЛЕКАТЕЛЬНЫЕ ТЕКСТЫ НА ЛЮБЫЕ ТЕМЫ</div>
-									<p>Да, да, мы знаем, что видео-контент является наиболее популярным. Но и тексты не менее важны — даже в TikTok! Текст публикации должен быть удобным для чтения и логично структурированным. Он должен содержать <strong>заголовок, введение, основную часть</strong> и <strong>заключение</strong>. Публикация должна выполнять поставленную цель. Например, продать товар, ознакомить с новой компанией, проинформировать о новых событиях или просто развлечь целевую аудиторию. Для этого следует использовать в тексте призыв к действию. А чтобы публикация была легкая для восприятия, следует использовать различные емоджи.</p>
-									<p>И конечно же, все тексты должны быть грамотно написаны. Поэтому советуем убедиться в правильности написания на сайте <a href="http://www.sentencechecker.com">www.sentencechecker.com</a></p><a class="sBlogInner__imgWrap" href="img/@2x/Screenshot_1.jpg" data-fancybox="image-3">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/Screenshot_1.webp"/><img src="img/@2x/Screenshot_1.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-									<div class="h2">Всегда быть в курсе событий</div>
-									<p>В мире социальных сетей постоянно продолжаются изменения. Обновляется функционал, появляются новые возможности и даже платформы. Поэтому, чтобы создавать качественный контент и заинтересовывать целевую аудиторию стоит всегда идти в ногу со временем. Для этого SMM-специалист должен постоянно следить за актуальными новостями и трендами. Кстати, если вы еще не знаете, какие тренды актуальны в 2021 году с<a href="http://www.uaateam.agency/blog/smm-trends-of-202">оветуем прочитать нашу статью</a>.</p>
-									<div class="h2">Быть исследованиям на «ты»</div>
-									<p>Удивлены? Объясняю <img alt="" src="img/smile.svg" loading="lazy"/> Перед написанием контента и созданием визуала, SMM-менеджер должен понимать, что думает клиенты о компании, кто ее основные конкуренты, контент они публикуют, какую позицию компания занимает на рынке и др. Для этого, время от времени, следует проводить опросы, анкетирование или, например, интервью.</p>
-									<p>Также существует множество полезных сервисов, которые помогут сделать ваше исследование более глубоким и совершенным.</p>
-									<p><a href="http://www.semrush.com">www.semrush.com</a> — лучший инструмент для анализа сайтов конкурентов. Здесь можно найти информацию о позиции конкурента на рынке, проанализировать их рекламные кампании или провести сравнительный анализ нескольких конкурентов.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-3.jpg" data-fancybox="image-4">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-3.webp"/><img src="img/@2x/pasted-image-0-3.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--></a>
-									<p><a href="http://www.similarweb.com">www.similarweb.com</a> — сайт, который предлагает своим клиентам информацию и статистику об объемах трафика своих клиентов и конкурентов; источники трафика, включая анализ ключевых слов, время пребывания на сайте, просмотр страниц, показатель отказов и др.</p>
-									<p><a href="http://www.facebook.com/ads/library/">www.facebook.com/ads/library/</a> — библиотека рекламы в Facebook. Здесь вы можете искать рекламу конкурентов, которая демонстрируется в приложениях и сервисах Facebook. Просто впишите компанию, которая вас интересует, садитесь поудобнее и анализируйте полученные результаты.</p>
-									<div class="h2">БЫТЬ НЕМНОГО PR-МЕНЕДЖЕРОМ</div>
-									<p>Наверное нет такого бизнеса, который ни разу не сотрудничал с блогерами и лидерами мнений. И именно закулисье этого сотрудничества ложится на плечи незаменимого SMM-менеджера. Ведь прежде всего, нужно провести анализ блогеров, их целевой аудитории, проанализировать их ценовую политику и понять с кем из них выйдет наиболее плодотворный результат. И кстати, это еще не все. SMM-менеджер должен представить компанию в таком свете, чтобы блогер тоже безотказно захотел с нами работать. Именно здесь, на этом этапе, приходят на помощь навыки и понимание PR.</p>
-									<div class="h2">ПОНИМАТЬ ОСНОВЫ РЕКЛАМЫ И ТАРГЕТИНГА</div>
-									<p>Не все компании могут нанять таргетолога, который бы отвечал только за запуск рекламы в социальных сетях. Поэтому довольно часто эти обязанности выполняет SMM-специалист. С помощью таргетированной рекламы можно быстро увеличить количество подписчиков, вывести новый товар на рынок, расширить базу клиентов и повысить продажи. Поэтому, если вы еще не знаете основ рекламы в социальных сетях, советуем быстро исправлять ситуацию с помощью различных курсов и книг.</p>
-									<div class="h2">АНАЛИЗИРОВАТЬ РЕЗУЛЬТАТЫ</div>
-									<p>Последний, ​​но не менее важный навык. Стоит уметь оценивать свою работу. Именно это поможет вовремя исправлять ошибки и становиться более профессиональными. Определите контрольные точки, по которым вы сможете изучать достигнутые результаты и отслеживать динамику. Это могут быть брани, комментарии, переходы на сайт, охват публикаций и другое. Рекомендуем проводить еженедельные или ежемесячные анализы и формировать их в удобные для вас отчеты. Это поспособствует лучшему пониманию о том, какой контент, рубрики или визуал работают эффективнее.</p>
-									<p>Итак, работа SMM-менеджера достаточно сложная, но невероятно интересная и многосторонняя. Поэтому, если вы хотите попробовать себя в этой сфере, помните, что постоянное развитие — залог успеха в SMM мире. Открывайте для себя учебные курсы, вдохновляйтесь успешными примерами и изучайте новые инструменты для повышения своего профессионализма. Всегда ловите новые возможности и обязательно наслаждайтесь своим делом <img alt="" src="img/smile.svg" loading="lazy"/></p>
-									<div class="sBlogInner__tagWrap"><a class="sBlogInner__tag" href="#">#SMM</a><a class="sBlogInner__tag" href="#">#SEO</a>
-									</div>
 								</div>
-								<div class="share">
-									<div class="share__btn">
-										<svg class="icon icon-share ">
-											<use xlink:href="img/svg/sprite.svg#share"></use>
-										</svg><span>Share</span>
-									</div>
-									<ul> 
-											<li><a href="#"> 
-													<svg class="icon icon-fb ">
-														<use xlink:href="img/svg/sprite.svg#fb"></use>
-													</svg></a></li>
-											<li><a href="#"> 
-													<svg class="icon icon-twitter ">
-														<use xlink:href="img/svg/sprite.svg#twitter"></use>
-													</svg></a></li>
-											<li><a href="#"> 
-													<svg class="icon icon-linkedin ">
-														<use xlink:href="img/svg/sprite.svg#linkedin"></use>
-													</svg></a></li>
-											<li><a href="#"> 
-													<svg class="icon icon-rss ">
-														<use xlink:href="img/svg/sprite.svg#rss"></use>
-													</svg></a></li>
-									</ul>
-								</div>
-								<div class="form-wrap">
-									<form> 
-										<div class="form-wrap__bgIcon"> 
-											<svg class="icon icon-mail ">
-												<use xlink:href="img/svg/sprite.svg#mail"></use>
-											</svg>
+								<div class="col-auto">
+									<div class="info">
+										<div class="info__item"> 
+											<svg class="icon icon-eye ">
+												<use xlink:href="img/svg/sprite.svg#eye"></use>
+											</svg><span>188</span>
 										</div>
-										<div class="h3">Подписаться</div>
-										<div class="row justify-content-between">
-											<div class="col-auto">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="blog" type="checkbox"/><span class="custom-input__text form-check-label">Блог</span>
-												</label>
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="vacancy" type="checkbox"/><span class="custom-input__text form-check-label">Vacancy</span>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="form-wrap__inputWrap"> 
-													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
-													</div>
-													<!-- +e.input-wrap-->
-													<button class="form-wrap__btn btn btn-secondary" type="submit">OK
-													</button>
+										<div class="info__item"> 
+											<svg class="icon icon-comment ">
+												<use xlink:href="img/svg/sprite.svg#comment"></use>
+											</svg><span>0</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sBlogInner__article">
+								<div class="sBlogInner__autor d-none d-lg-block">
+									<div class="sBlogInner__autorName">Viktoriia Blavitska
+									</div>
+									<div class="sBlogInner__autorAdd">21 июня <span class="text-secondary">|</span> 2021
+									</div>
+								</div>
+								<p>Сегодня Social Media Marketing является одним из самых действенных инструментов в продвижении каждого бизнеса. Миллионы компаний по всему миру в поисках своего профессионального SMM-менеджера. И если Вы думаете, что SMM-щик это тот, кто просто публикует красивые картинки и ставит хэштеги, то вынуждена Вас разочаровать <img alt="" src="img/smile.svg" loading="lazy"/> Это специалист, который работает не только с формированием бренда, позиционированием товаров или услуг, но и аналитикой, бюджетом и рекламными инструментами ключевых соцсетей. Поэтому, чтобы стать профессионалом в этом деле стоит обладать такими обязательными навыками.</p>
+								<div class="h2">БЫТЬ КРЕАТИВНЫМ</div>
+								<p>Начнем мы с очевидного. Основная работа SMM-менеджера заключается в создании интересного контента для продвижения бренда в социальных сетях. Это написание текстов, создание дизайна, фото и видео. Данный творческий процесс в большинстве является время затратным и сложным. Ведь всегда нужно искать новые, интересные идеи. Для новой порции вдохновения советуем заглянуть на такие сайты:</p>
+								<p><a href="http://www.pinterest.com">www.pinterest.com </a>— социальная сеть, в которой можно загружать изображения, делиться ими с подписчиков и самим создавать коллекции шрифтов, постеров, макетов сайтов, шаблонов и прочее</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0.jpg" data-fancybox="image-1">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/pasted-image-0.webp"/><img src="img/@2x/pasted-image-0.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture--></a>
+								<p><a href="http://www.behance.net">www.behance.net</a> — сообщество креативных фотографов, дизайнеров и иллюстраторов со всего мира. Их невероятные портфолио обязательно вдохновят каждого на новые и интересные идеи.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-1.jpg" data-fancybox="image-2">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-1.webp"/><img src="img/@2x/pasted-image-0-1.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture--></a>
+								<p><a href="http://www.niice.co">www.niice.co</a> — поисковая система, которая поможет найти искусство вдохновения для своих проектов или повседневной жизни. Здесь вы можете искать все что угодно, наслаждаться красивым визуалом и наполняться новыми идеями.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-2.jpg" data-fancybox="image-3">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-2.webp"/><img src="img/@2x/pasted-image-0-2.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture--></a>
+								<div class="h2">ПИСАТЬ УВЛЕКАТЕЛЬНЫЕ ТЕКСТЫ НА ЛЮБЫЕ ТЕМЫ</div>
+								<p>Да, да, мы знаем, что видео-контент является наиболее популярным. Но и тексты не менее важны — даже в TikTok! Текст публикации должен быть удобным для чтения и логично структурированным. Он должен содержать <strong>заголовок, введение, основную часть</strong> и <strong>заключение</strong>. Публикация должна выполнять поставленную цель. Например, продать товар, ознакомить с новой компанией, проинформировать о новых событиях или просто развлечь целевую аудиторию. Для этого следует использовать в тексте призыв к действию. А чтобы публикация была легкая для восприятия, следует использовать различные емоджи.</p>
+								<p>И конечно же, все тексты должны быть грамотно написаны. Поэтому советуем убедиться в правильности написания на сайте <a href="http://www.sentencechecker.com">www.sentencechecker.com</a></p><a class="sBlogInner__imgWrap" href="img/@2x/Screenshot_1.jpg" data-fancybox="image-3">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/Screenshot_1.webp"/><img src="img/@2x/Screenshot_1.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture--></a>
+								<div class="h2">Всегда быть в курсе событий</div>
+								<p>В мире социальных сетей постоянно продолжаются изменения. Обновляется функционал, появляются новые возможности и даже платформы. Поэтому, чтобы создавать качественный контент и заинтересовывать целевую аудиторию стоит всегда идти в ногу со временем. Для этого SMM-специалист должен постоянно следить за актуальными новостями и трендами. Кстати, если вы еще не знаете, какие тренды актуальны в 2021 году с<a href="http://www.uaateam.agency/blog/smm-trends-of-202">оветуем прочитать нашу статью</a>.</p>
+								<div class="h2">Быть исследованиям на «ты»</div>
+								<p>Удивлены? Объясняю <img alt="" src="img/smile.svg" loading="lazy"/> Перед написанием контента и созданием визуала, SMM-менеджер должен понимать, что думает клиенты о компании, кто ее основные конкуренты, контент они публикуют, какую позицию компания занимает на рынке и др. Для этого, время от времени, следует проводить опросы, анкетирование или, например, интервью.</p>
+								<p>Также существует множество полезных сервисов, которые помогут сделать ваше исследование более глубоким и совершенным.</p>
+								<p><a href="http://www.semrush.com">www.semrush.com</a> — лучший инструмент для анализа сайтов конкурентов. Здесь можно найти информацию о позиции конкурента на рынке, проанализировать их рекламные кампании или провести сравнительный анализ нескольких конкурентов.</p><a class="sBlogInner__imgWrap" href="img/@2x/pasted-image-0-3.jpg" data-fancybox="image-4">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/pasted-image-0-3.webp"/><img src="img/@2x/pasted-image-0-3.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture--></a>
+								<p><a href="http://www.similarweb.com">www.similarweb.com</a> — сайт, который предлагает своим клиентам информацию и статистику об объемах трафика своих клиентов и конкурентов; источники трафика, включая анализ ключевых слов, время пребывания на сайте, просмотр страниц, показатель отказов и др.</p>
+								<p><a href="http://www.facebook.com/ads/library/">www.facebook.com/ads/library/</a> — библиотека рекламы в Facebook. Здесь вы можете искать рекламу конкурентов, которая демонстрируется в приложениях и сервисах Facebook. Просто впишите компанию, которая вас интересует, садитесь поудобнее и анализируйте полученные результаты.</p>
+								<div class="h2">БЫТЬ НЕМНОГО PR-МЕНЕДЖЕРОМ</div>
+								<p>Наверное нет такого бизнеса, который ни разу не сотрудничал с блогерами и лидерами мнений. И именно закулисье этого сотрудничества ложится на плечи незаменимого SMM-менеджера. Ведь прежде всего, нужно провести анализ блогеров, их целевой аудитории, проанализировать их ценовую политику и понять с кем из них выйдет наиболее плодотворный результат. И кстати, это еще не все. SMM-менеджер должен представить компанию в таком свете, чтобы блогер тоже безотказно захотел с нами работать. Именно здесь, на этом этапе, приходят на помощь навыки и понимание PR.</p>
+								<div class="h2">ПОНИМАТЬ ОСНОВЫ РЕКЛАМЫ И ТАРГЕТИНГА</div>
+								<p>Не все компании могут нанять таргетолога, который бы отвечал только за запуск рекламы в социальных сетях. Поэтому довольно часто эти обязанности выполняет SMM-специалист. С помощью таргетированной рекламы можно быстро увеличить количество подписчиков, вывести новый товар на рынок, расширить базу клиентов и повысить продажи. Поэтому, если вы еще не знаете основ рекламы в социальных сетях, советуем быстро исправлять ситуацию с помощью различных курсов и книг.</p>
+								<div class="h2">АНАЛИЗИРОВАТЬ РЕЗУЛЬТАТЫ</div>
+								<p>Последний, ​​но не менее важный навык. Стоит уметь оценивать свою работу. Именно это поможет вовремя исправлять ошибки и становиться более профессиональными. Определите контрольные точки, по которым вы сможете изучать достигнутые результаты и отслеживать динамику. Это могут быть брани, комментарии, переходы на сайт, охват публикаций и другое. Рекомендуем проводить еженедельные или ежемесячные анализы и формировать их в удобные для вас отчеты. Это поспособствует лучшему пониманию о том, какой контент, рубрики или визуал работают эффективнее.</p>
+								<p>Итак, работа SMM-менеджера достаточно сложная, но невероятно интересная и многосторонняя. Поэтому, если вы хотите попробовать себя в этой сфере, помните, что постоянное развитие — залог успеха в SMM мире. Открывайте для себя учебные курсы, вдохновляйтесь успешными примерами и изучайте новые инструменты для повышения своего профессионализма. Всегда ловите новые возможности и обязательно наслаждайтесь своим делом <img alt="" src="img/smile.svg" loading="lazy"/></p>
+								<div class="sBlogInner__tagWrap"><a class="sBlogInner__tag" href="#">#SMM</a><a class="sBlogInner__tag" href="#">#SEO</a>
+								</div>
+							</div>
+							<div class="share">
+								<div class="share__btn">
+									<svg class="icon icon-share ">
+										<use xlink:href="img/svg/sprite.svg#share"></use>
+									</svg><span>Share</span>
+								</div>
+								<ul> 
+										<li><a href="#"> 
+												<svg class="icon icon-fb ">
+													<use xlink:href="img/svg/sprite.svg#fb"></use>
+												</svg></a></li>
+										<li><a href="#"> 
+												<svg class="icon icon-twitter ">
+													<use xlink:href="img/svg/sprite.svg#twitter"></use>
+												</svg></a></li>
+										<li><a href="#"> 
+												<svg class="icon icon-linkedin ">
+													<use xlink:href="img/svg/sprite.svg#linkedin"></use>
+												</svg></a></li>
+										<li><a href="#"> 
+												<svg class="icon icon-rss ">
+													<use xlink:href="img/svg/sprite.svg#rss"></use>
+												</svg></a></li>
+								</ul>
+							</div>
+							<div class="form-wrap">
+								<form> 
+									<div class="form-wrap__bgIcon"> 
+										<svg class="icon icon-mail ">
+											<use xlink:href="img/svg/sprite.svg#mail"></use>
+										</svg>
+									</div>
+									<div class="h3">Подписаться</div>
+									<div class="row justify-content-between">
+										<div class="col-auto">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="blog" type="checkbox"/><span class="custom-input__text form-check-label">Блог</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="vacancy" type="checkbox"/><span class="custom-input__text form-check-label">Vacancy</span>
+											</label>
+										</div>
+										<div class="col-auto">
+											<div class="form-wrap__inputWrap"> 
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
 												</div>
+												<!-- +e.input-wrap-->
+												<button class="form-wrap__btn btn btn-secondary" type="submit">OK
+												</button>
 											</div>
 										</div>
-									</form>
-								</div>
+									</div>
+								</form>
 							</div>
 						</section>
 						<!-- end sBlogInner-->
@@ -446,24 +462,126 @@
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="form-wrap__title form-data h2 ttu text-secondary">НАЧАТЬ РАБОТУ С #UAATEAM
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__policy">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Сайт" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__subtitle">Выберите услугу:
+					</div>
+					<div class="form-wrap__service">
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Контекстная реклама</span></span>
 						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Реклама в соцсетях</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Настройка веб-аналитики</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">SMM стратегия</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Динамический ремаркетинг</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Аудит рекламных кампаний</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Отчет в Google Data Studio</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Сквозная аналитика</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Google Shopping</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Колл-трекинг</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">SEO аудит</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Email маркетинг</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">SEO оптимизация</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">SMM продвижение</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Комплексное продвижение</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Оптимизация конверсии</span></span>
+						</label>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="checkbox"/><span class="custom-checkbox__text"><span class="custom-checkbox__checkboxTitle">Консультация</span></span>
+						</label>
+					</div>
+					<div class="form-wrap__subtitle">Предварительный бюджет
+					</div>
+					<div class="form-wrap__budgetWrap"> 
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" placeholder="" step="any"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<select class="form-wrap__input form-control">
+							<option>USD</option>
+							<option>грн</option>
+						</select>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий"></textarea>
+					</div>
+					<!-- +e.input-wrap-->
+					<p class="text-end">Пожалуйста, заполните поля отмеченные<span class="form-wrap__molnia"></span>
+					</p>
+					<div class="text-end">
+						<button class="form-wrap__btn btn btn-secondary" type="submit">Отправить заявку
+						</button>
 					</div>
 				</form>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-sentence" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title form-data h2 ttu text-secondary">ПОЛУЧИТЬ СПЕЦПРЕДЛОЖЕНИЕ
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Сайт" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Предложение месяца" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="text-end">
+						<button class="form-wrap__btn btn btn-secondary" type="submit">Отправить заявку
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

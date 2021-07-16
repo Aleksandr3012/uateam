@@ -4,6 +4,10 @@
 	// --sPB: ;
 	// --sTPB: ;
 
+	@include media-breakpoint-only(md) {
+		--sPT: #{rem(40)};
+	}
+
 	&__articleImg {
 		padding-bottom: rem(10);
 		@include media-breakpoint-up(lg) {
@@ -15,6 +19,9 @@
 		margin-bottom: rem(15);
 		border-top: 1px solid #eff1f4;
 		border-bottom: 1px solid #eff1f4;
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(15);
+		}
 	}
 
 	&__autorAdd {
@@ -27,8 +34,10 @@
 	}
 
 	&__autor {
-		padding-top: rem(10);
-		padding-bottom: rem(15);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(10);
+			padding-bottom: rem(15);
+		}
 		font-size: rem(16);
 	}
 

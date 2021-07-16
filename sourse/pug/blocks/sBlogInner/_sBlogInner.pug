@@ -10,18 +10,20 @@ mixin info(e='188',c='0')
 mixin sBlogInner(data)
 	// start sBlogInner
 	+b.SECTION.sBlogInner.section#sBlogInner&attributes(attributes)
-		.container
 			
 			+e.articleImg
 				+pic('smm.jpg','','')
 			
 			.row.justify-content-between.mb-4
 				.col-auto 
-					+share
+					+share.d-none.d-lg-flex
+					+e.autor.d-lg-none
+						+e.autorName Viktoriia Blavitska
+						+e.autorAdd 21 июня #[span.text-secondary |] 2021
 				.col-auto
 					+info
 			+e.article
-				+e.autor 
+				+e.autor.d-none.d-lg-block
 					+e.autorName Viktoriia Blavitska
 					+e.autorAdd 21 июня #[span.text-secondary |] 2021
 				p Сегодня Social Media Marketing является одним из самых действенных инструментов в продвижении каждого бизнеса. Миллионы компаний по всему миру в поисках своего профессионального SMM-менеджера. И если Вы думаете, что SMM-щик это тот, кто просто публикует красивые картинки и ставит хэштеги, то вынуждена Вас разочаровать #[img(alt='' src='img/smile.svg' loading="lazy")] Это специалист, который работает не только с формированием бренда, позиционированием товаров или услуг, но и аналитикой, бюджетом и рекламными инструментами ключевых соцсетей. Поэтому, чтобы стать профессионалом в этом деле стоит обладать такими обязательными навыками.

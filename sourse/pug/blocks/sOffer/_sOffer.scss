@@ -1,9 +1,10 @@
 // start .sOffer
 .sOffer {
 	// --sPT: ;
-	--sPB: #{rem(200)};
 	--sTPB: #{rem(20)};
+	--sPB: #{rem(100)};
 	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(200)};
 		--sTPB: 0;
 	}
 

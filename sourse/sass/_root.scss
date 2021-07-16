@@ -9,7 +9,7 @@
 	}
 
 	--header-height: #{rem(80)};
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(xxl) {
 		--header-height: #{rem(125)};
 	}
 
