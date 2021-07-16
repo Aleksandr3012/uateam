@@ -1,0 +1,32 @@
+mixin headerBlog(data)
+	// start headerBlog
+	+b.headerBlog.section#headerBlog&attributes(attributes)
+		.container
+			+e.decor blog
+				
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i,name,date,txt,views)
+						+e.slide.swiper-slide
+							.row 
+								.col-lg-8 
+									+e.imgWrap(href="#")
+										+pic(`blog-${i}.jpg`,'','')
+								+e.col.col-lg-4
+									+e.name= name 
+									+e.date!= date 
+									+e.txt!= txt 
+									div
+										+e.link(href="#") Подробнее
+									+e.bottomBlock.d-none.d-lg-flex 
+										+e.activity 
+											+icon('eye')
+											span= views 
+										+e.activity
+											+icon('comment')
+											span 0
+					+slide(1,`Olga Borzenko`,`10 июля <span class="text-secondary">|</span>2021`,`Новый фактор ранжирования от Google в 2021 году: что нужно знать В современном мире каждый...`,`141`)
+					+slide(2,`Vladyslav Goncharenko`,`6 июля <span class="text-secondary">|</span>2021`,`Tik-Tok – соцсеть, которая растет каждую минут. Сейчас в ней 1 млрд пользователей из 150...`,`16`)
+					+slide(3,`Vladyslav Goncharenko`,`6 июля <span class="text-secondary">|</span>2021`,`Есть мнение, что таргетированную рекламу нужно отключать в праздничные дни, иначе «сольете весь бюджет» и...`,`43`)
+			.swiper-pagination
+	// end headerBlog

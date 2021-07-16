@@ -1,13 +1,16 @@
 mixin sitebar(data)
 	// start sitebar
 	+b.sitebar.section#sitebar&attributes(attributes)
-		.row.justify-content-between.d-lg-none 
-			.col-auto 
-				+share
-			.col-auto
-				+e.category--js
-					+icon('settings')
-					span Категории
+		if block 
+			block 
+		else
+			.row.justify-content-between.d-lg-none 
+				.col.col-sm-auto 
+					+share
+				.col-auto
+					+e.category--js
+						+icon('settings')
+						span Категории
 
 		+e.sitebarWrap
 			+e.main

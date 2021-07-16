@@ -8,3 +8,4 @@
 1. <https://aleksandr3012.github.io/uateam/public/about-us.html>
 1. <https://aleksandr3012.github.io/uateam/public/promotion-of-a-furniture-store-in-europe.html>
 1. <https://aleksandr3012.github.io/uateam/public/clientspage.html>
+1. <https://aleksandr3012.github.io/uateam/public/blog.html>

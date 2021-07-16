@@ -325,6 +325,23 @@ function eventHandler() {
 		},
 	});
 
+	const headerSlider = new Swiper('.headerBlog__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		loop: true,
+		pagination: {
+			el: '.headerBlog .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		
+		autoplay: {
+			delay: 4000,
+		},
+	});
+
 
 	var casesThumbSlider = new Swiper(".sCases__sliderThumb--js", {
 		spaceBetween: 0,
