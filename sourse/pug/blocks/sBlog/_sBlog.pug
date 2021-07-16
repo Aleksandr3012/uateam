@@ -1,0 +1,57 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 НОВОЕ ИЗ БЛОГА
+
+				
+			mixin card(img,name,date)
+				+e.card 
+					.row 
+						+e.imgCol.col-md-8 
+							+e.imgWrap(href="#")
+								+pic(`blog-${img}`,'','')
+						+e.txtCol.col
+							+e.name= name 
+							+e.date!= date 
+							+e.tags 
+								block
+			+card('1.jpg','Olga Borzenko',`10 Июля <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #SEO
+				+e.tag(href="#") #Google
+			+card('2.jpg','Vladyslav Goncharenko',`6 Июля <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #ТikTok
+			+card('3.jpg','Vladyslav Goncharenko',`6 Июля <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #Контекстная реклама
+				+e.tag(href="#") #ppc
+			+card('4.jpg','Olga Borzenko',`1 Июля <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #SEO
+			+card('5.jpg','Olga Borzenko',`29 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #безанкорные ссылки
+				+e.tag(href="#") #анкорные ссылки
+			+card('6.jpg','Vadym Hrynchenko',`25 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #cro
+			+card('7.jpg','Viktoriia Blavitska',`21 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #SMM
+			+card('8.jpg','Vladyslav Goncharenko',`11 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #YouTube
+			+card('9.jpg','Olga Kyvliuk',`8 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #текст
+			+card('10.jpg','Vladyslav Goncharenko',`3 Июня <span class="text-secondary">|</span> 2021`)
+				+e.tag(href="#") #Keyword
+				+e.tag(href="#") #SEO
+			+e.btn.btn.btn-outline-secondary(href="#") Еще
+			+form-wrap 
+				+e.bgIcon 
+					+icon('mail')
+				.h3 Подписаться
+				.row.justify-content-between
+					.col-auto
+						+in-c('checkbox','Блог','blog')
+						+in-c('checkbox','Vacancy','vacancy')
+					.col-auto
+						+e.inputWrap 
+							+input("Email","email")
+							+e.btn.btn.btn-secondary(type="submit") OK
+	// end sBlog

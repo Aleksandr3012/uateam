@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/headerBlog/_headerBlog.pug
+include ../blocks/sMap/_sMap.pug
+include ../blocks/sitebar/_sitebar.pug
+include ../blocks/sBlog/_sBlog.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '👉Блог #UAATEAM | UAATEAM'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlog()
+	.container
+		.row 
+			.col.order-lg-last 
+				+sitebar
+					+b.search 
+						+input('Поиск','search')
+						+e.btn(type="submit")
+							+icon('search')
+					+e.category--js.d-lg-none
+						+icon('settings')
+						span Категории
+
+					
+			.col-lg-8 
+				+sBlog
+	+footer().bg-primary
+
+
+

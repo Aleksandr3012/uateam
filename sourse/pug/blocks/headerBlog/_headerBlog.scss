@@ -1,0 +1,138 @@
+// start .headerBlog
+.headerBlog {
+	--sPT: 8vw;
+	--sPB: 8vw;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(115)};
+		--sPB: #{rem(115)};
+	}
+	// --sTPB: ;
+	background-color: #1b1d1f;
+
+	.container {
+		position: relative;
+	}
+
+	&__decor {
+		font-size: 16vw;
+		line-height: 1;
+		color: #3a3e3f;
+		position: absolute;
+		right: 0;
+		top: -120px;
+		letter-spacing: 20px;
+		opacity: .3;
+		font-weight: 700;
+		user-select: none;
+	}
+
+	.row {
+		@include media-breakpoint-up(lg) {
+			@include roww(60px);
+		}
+		@include media-breakpoint-up(xl) {
+			@include roww(100px);
+		}
+	}
+
+	&__imgWrap {
+		display: block;
+
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(20);
+		}
+	}
+
+	&__name, &__date {
+		color: $primary;
+	}
+
+	&__date {
+		.text-secondary {
+			padding-right: rem(3);
+		}
+	}
+
+	&__txt {
+		color: #b3b4b6;
+		font-size: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-top: 10%;
+		}
+		padding: rem(20) 0;
+	}
+
+	&__link {
+		cursor: pointer;
+		color: #fff !important;
+    margin: 0;
+    display: inline-flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: center;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background-color: $primary;
+			width: 85px;
+			margin: auto;
+			@include mt;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 0;
+			}
+		}
+	}
+
+	.icon {
+		font-size: rem(28);
+		color: $secondary;
+		margin-right: rem(6);
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__bottomBlock {
+		margin-top: auto;
+		padding-top: rem(15);
+		align-items: center;
+		flex-wrap: wrap;
+		@include roww(15px);
+	}
+
+	&__activity {
+		display: flex;
+		align-items: center;
+
+		span {
+			color: #aaaaaa;
+		}
+	}
+
+	&__slider {
+		padding-bottom: rem(20);
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.headerBlog
