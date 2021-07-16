@@ -10,21 +10,56 @@
 	}
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(128)};
-		--sPB: #{rem(100)};
-		--sPT: #{rem(190)};
+		--sPB: #{rem(240)};
+		--sPT: #{rem(200)};
+		clip-path: polygon(0px 9px, 100% 118px, 100% 78.04%, 0px 100%);
 	}
-
-	@include media-breakpoint-up(xl) {
-		--sPB: #{rem(190)};
-	}
-
+	
+	clip-path: polygon(0px 9px, 100% 80px, 100% 95%, 0px 100%);
 	background: #343c9b;
 	color: #fff;
-	clip-path: polygon(0px 9px, 100% 118px, 100% 78.04%, 0px 100%);
 
 	h2, .h2 {
 		text-transform: uppercase;
 		letter-spacing: .3px;
+	}
+
+	&__slide {
+		text-align: center;
+		
+	}
+
+	&__imgWrap {
+		border-radius: 50%;
+		width: rem(196);
+		height: rem(196);
+		border: solid 5px $secondary;
+		display: grid;
+		place-items: center;
+		margin: 0 auto rem(37);
+
+		img {
+			max-width: rem(80);
+		}
+	}
+
+	&__txt {
+		font-size: rem(20);
+	}
+
+	&__slider {
+		overflow: visible;
+		max-width: rem(820);
+	}
+
+	&__slide {
+		max-width: rem(280);
+		@include media-breakpoint-up(sm) {
+			max-width: rem(300);
+		}
+		@include media-breakpoint-up(md) {
+			max-width: calc(100% / 3);
+		}
 	}
 
 

@@ -1,0 +1,29 @@
+mixin sClients(data)
+	// start sClients
+	+b.SECTION.sClients.section#sClients&attributes(attributes)
+		.container
+			+b.section-title
+				h2 НАШИ КЛИЕНТЫ 
+			.row
+				mixin item(i)
+					+e.col.col-lg-3.col-sm-4.col-6 
+						+e.item 
+							+pic(`logo-${i}.png`,'',0)
+				+item('1')
+				+item('2')
+				+item('3')
+				+item('4')
+				+item('5')
+				+item('6')
+				+item('7')
+				+item('8')
+				+item('9')
+				+item('10')
+				+item('11')
+				+item('12')
+				+item('13')
+				+item('14')
+				+item('15')
+				+item('16')
+			+e.btn(type="button") Еще
+	// end sClients

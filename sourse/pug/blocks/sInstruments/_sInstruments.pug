@@ -5,15 +5,14 @@ mixin sInstruments(data)
 			+b.section-title.text-center
 				h2 ИНСТРУМЕНТЫ
 				
-			+e.sliderWrap
-				+e.slider--js.swiper-container
-					.swiper-wrapper
-						mixin slide(i, t)
-							+e.slide.swiper-slide
-								+e.imgWrap
-									+pic(`instruments-${i}.png`,'','')
-								+e.txt= t
-						+slide(1,'MerchantCenter')
-						+slide(2,'Google Analytics')
-						+slide(1,'Hotjar')
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i, t)
+						+e.slide.swiper-slide
+							+e.imgWrap
+								+pic(`instruments-${i}.png`,'','')
+							+e.txt= t
+					+slide(1,'MerchantCenter')
+					+slide(2,'Google Analytics')
+					+slide(1,'Hotjar')
 	// end sInstruments

@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sOffer/_sOffer.pug
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sServiceImplementation/_sServiceImplementation.pug
+include ../blocks/sOptions/_sOptions.pug
+include ../blocks/sServiceAdvantages/_sServiceAdvantages.pug
+include ../blocks/sCasesSlidedr/_sCasesSlidedr.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sClients/_sClients.pug
+include ../blocks/sCasesCatalog/_sCasesCatalog.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '👉 Разовая настройка контекстной рекламы Google Ads заказать недорого | UAATEAM'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock-inner({
+		img: 'header-clients.png'
+	}).headerBlock-nastrojka-kontekstnoj
+		+b.section-title
+			h1 РЕШАЕМ ЗАДАЧИ
+
+				span.text-secondary.d-block #КЛИЕНТОВ
+			h3 Обеспечивая комплексный подход, мы видим картину в целом.
+				br
+				| Поэтому предлагаем не точечные меры, а систему изменений,
+				br
+				| которая приведет ваш проект к долгосрочным результатам.
+				br
+				| Мы знаем, что все клиенты разные, как и их цели.
+		+e.linksWrap--line.d-none.d-md-flex
+			+e.link(href="https://www.google.com/partners/agency?id=4078913348" target="_blank") we are google
+			+e.link(href="https://www.facebook.com/business/partner-directory/details?id=321716569002489") facebook partners
+	+sCasesCatalog
+	+sClients()
+	+sReviews()
+	+sForm().background-dark
+	+footer().bg-primary
+
+
+

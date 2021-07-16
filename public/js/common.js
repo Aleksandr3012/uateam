@@ -41,9 +41,7 @@ const JSCCommon = {
 			// 	root.style.setProperty('--spacing-end', null);
 			// },
 
-		}); // $(link).fancybox({
-		// });
-
+		});
 		$(".modal-close-js").click(function () {
 			fancybox.close();
 		}); // fancybox.defaults.backFocus = false;
@@ -172,60 +170,6 @@ const JSCCommon = {
 		Inputmask("+99(999)999-99-99").mask(InputTel);
 	},
 
-	// /inputMask
-	ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
-	},
-
-	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				fancybox.close();
-				Fancybox.show([{
-					src: "#modal-thanks",
-					type: "inline"
-				}]); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
-	},
-
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -267,12 +211,10 @@ const JSCCommon = {
 const $ = jQuery;
 
 function eventHandler() {
-	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
 
@@ -425,11 +367,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 0,
-		breakpoints: {
-			992: {
-				spaceBetween: 106
-			}
-		},
 		pagination: {
 			el: '.sServises .swiper-pagination',
 			type: 'bullets',
@@ -485,6 +422,30 @@ function eventHandler() {
 	}
 
 	makeDDGroup(['.accardion', '.dd-price-js']);
+	$(".sClients__btn").click(function () {
+		let item = $(".sClients__col");
+
+		if (item.is(":hidden")) {
+			$(".sClients__col:hidden").fadeIn();
+		}
+
+		$(this).hide();
+	});
+
+	function load_more_case_folders() {
+		var case_folders = $('.case-nav-folder div'),
+				cl_count = 0;
+		$('.js-show-more-cases').click(function () {
+			cl_count += 4;
+
+			for (var i = cl_count; i < cl_count + 4; i++) {
+				if (i < case_folders.length) case_folders[i].style.display = 'block';
+				if (i == case_folders.length - 1) $(this).hide();
+			}
+		});
+	}
+
+	load_more_case_folders();
 }
 
 ;

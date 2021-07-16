@@ -1,0 +1,18 @@
+mixin sCasesCatalog(data)
+	// start sCasesCatalog
+	+b.SECTION.sCasesCatalog.section#sCasesCatalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 КЕЙСЫ
+				
+			.row
+				.col-lg-8
+
+					.row.case-nav-folder
+						- for (var x = 0; x < 16; x++)
+							+e.col.col-xl-3.col-lg-4.col-6 
+								+e.item(href="#") #торгсофт
+					button.btn.btn-outline-secondary.js-show-more-cases(type="button") Еще
+
+				.col
+	// end sCasesCatalog

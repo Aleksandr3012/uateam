@@ -1,0 +1,58 @@
+// start .sCasesCatalog
+.sCasesCatalog {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	.row{
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.btn{
+		color: #000;
+		width: 200px;
+		margin-top: rem(50);
+	}
+	&__col{
+		position: relative;
+			&:nth-child(n + 5) {
+				display: none;
+			}
+	}
+	&__item{
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		background-color: #e9edf1;
+		position: relative;
+		border-radius: 6px;
+		overflow: hidden;
+		height: 110px;
+		z-index: 1;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 28px 12px;
+		text-transform: lowercase;
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			border-radius: inherit;
+			background-color: #f6d20e;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+		&:before {
+			width: 70%;
+		}
+		&:after {
+			top: 15px;
+		}
+	}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCasesCatalog
