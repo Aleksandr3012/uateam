@@ -3,7 +3,9 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-
+	&__left-block{
+		max-width: rem(775);
+	}
 	.row{
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
@@ -56,3 +58,233 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCasesCatalog
+
+
+
+.top-card-wrap{
+	position: relative;
+	margin-bottom: rem(100);
+	&__aside{
+		position: absolute;
+		top: 50%;
+		right: 100%; 
+		transform: rotate(-90deg) translate(50%, -50%); 
+		transform-origin: right center;
+		color: #eef1f3;
+		font-weight: 700;
+		font-size: 70px;
+		margin-right: -.3em;
+		line-height: 1;
+		white-space: nowrap;
+	}
+}
+.top-card{
+
+	&__head{
+		// display: inline-block;
+			@include media-breakpoint-up(sm){
+
+				max-width: 80%;
+			}
+
+		display: flex; 
+		flex-wrap: wrap;
+		position: relative;
+		background-color: #f6d20a;
+		border-radius: 10px 10px 0 0; 
+		&-title{
+
+			cursor: pointer;
+			background-color: #f6d20a;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: #010101;
+			@include media-breakpoint-up(sm){
+				
+				padding: 9px 40px;
+				font-size: 20px;
+			}
+			padding: 9px 20px;
+				font-size: 18px;
+			position: relative; 
+			border-radius: 10px 10px 0 0;
+			position: relative;
+			background-color: #000000;
+			color: #ffffff; 
+			// box-shadow: -1px 12px 33px 2px rgba(0, 0, 0 , 50%);
+			z-index: 101;
+			
+		}
+	}
+	&__body{
+		color: #fff;
+		position: relative;
+		&::after{
+			content: '';
+			z-index: -1;
+			position: absolute;
+			position: absolute;
+			background: #343c9b;
+			opacity: .4;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+		&-content{
+				@include media-breakpoint-up(sm){
+					padding: 70px 60px;
+				}
+				padding: 30px 20px;
+			max-width: 600px; 
+			display: flex;  
+			flex-direction: column; 
+			flex: 1 1 auto;
+			// padding: 100px 95px;
+			background-image: linear-gradient(to right, #000000 0%, #000000 50%, transparent 100%);
+		}
+	}
+	&__tusk{
+		margin: 0;
+		color: #f6d20a;
+		line-height: 1.4;
+		margin-bottom: 15px;
+		font-size: 15px;
+ 
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: 800;
+	}
+	p{
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	&__name{ 
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: 800; 
+			margin: 0;
+			color: #f6d20a;
+			line-height: 1.4;
+			margin-bottom: 15px; 
+	}
+
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		max-width: 160px;
+	}
+}
+
+.case-filter{
+	font-size: 15px;
+	color: #989a9c; 
+	@include media-breakpoint-up(lg){
+
+		max-width: rem(300);
+		margin-left: auto;
+	}
+	&__title,
+	&__item{
+		display: flex; 
+		flex-direction: column;
+		padding: 10px 4px;
+		line-height: 1.1;
+		position: relative;
+		text-decoration: none;
+
+	}
+	&__item{
+		cursor: pointer;
+		position: relative;
+		@include media-breakpoint-down(lg){
+			font-size: 20px;
+			margin-bottom: rem(5);
+		}
+		&::after{
+			content: '';
+			position: absolute;
+				@include media-breakpoint-up(lg){
+					left: auto;
+					right: 107%;
+					top: 50%;
+				}
+				height: 4px;
+				height: 2px;
+				left: 0;
+				top: 100%;
+			margin-top: -1px;
+			width: 55px;
+			background-color: #0fa663;
+			opacity: 0;
+			visibility: hidden; 
+			transform: translate(-100%, 0); 
+			transition: opacity 0.4s,
+			-webkit-transform .25s;
+			-o-transition: transform 0.25s,
+			opacity .4s;
+			transition: transform 0.25s,
+			opacity .4s;
+			transition: transform 0.25s,
+			opacity 0.4s,
+			-webkit-transform .25s;
+		}
+		&:hover,
+		&.active{
+			font-weight: 700;
+			color: #31312d;
+			--bg: #f6d20e;
+			&::after{
+				transition: transform 0.25s,
+				opacity .4s;
+				transform: translate(0%, 0);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&.active{
+			--active-c: #ffffff;
+		}
+		&--group{
+			margin-left: rem(30);
+			position: relative;
+			padding-left: rem(30);
+		}
+	}
+	
+	&__sq{
+		width:18px;
+		height:18px;
+		margin-top: -8px;
+		border: 2px solid #b8b8b8;
+		position: absolute;
+		left: 0; 
+		top: rem(17);
+		background-color: var(--bg, transparent);
+
+		&::before{
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 5px;
+			border: 2px solid transparent;
+			border-top-width: 0;
+			border-right-width: 0; 
+			transform: rotateZ(-45deg) translate(5px, 1px); 
+			left: -2px;
+			top: 6px;
+			border-color: var(--active-c, transparent);
+		}
+	}
+	.swiper-slide{
+		width: auto;
+	}
+
+	.swiper-wrapper{
+		@include media-breakpoint-up(lg) {
+
+			display: block;
+			transform: none;
+		}
+	}
+}

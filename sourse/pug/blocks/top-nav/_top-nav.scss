@@ -6,7 +6,7 @@
 	z-index: 800;
 	background-color:#1b1d1f;
 	padding: rem(10) 0;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xxl) {
 		padding: rem(35) 0 rem(3);
 	}
 	@include mt;
@@ -15,6 +15,10 @@
 		margin-top: 0;
 		background-color: #fff;
 		box-shadow: 0 4px 7px 8px rgba(0, 0, 0, 0.14);
+		padding: rem(10) 0;
+		@include media-breakpoint-up(lg) {
+			padding: rem(10) 0 rem(3);
+		}
 
 		.menu .menu-link, .top-nav__lang, .top-nav__btn, .toggle-menu-mobile {
 			color: #000;

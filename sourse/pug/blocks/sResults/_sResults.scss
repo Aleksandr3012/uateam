@@ -12,10 +12,13 @@
 
 	&__col {
 		position: relative;
+		@include media-breakpoint-down(md) {
+			padding-bottom: rem(50);
+		}
 		&::before {
 			content: '';
 			position: absolute;
-			left: -10px;
+			left: 5px;
 			top: -5px;
 			width: 55px;
 			height: 55px;
@@ -26,6 +29,10 @@
 				width: 102px;
 				height: 102px;
 				top: -15px;
+			}
+
+			@include media-breakpoint-between(lg, xxl) {
+				left: 0;
 			}
 
 		}
@@ -40,14 +47,17 @@
 		font-weight: bold;
 		margin-bottom: rem(6);
 		font-size: rem(50);
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(lg) {
 			font-size: rem(72);
 		}
 		color: #000;
 	}
 	&__txt {
 		font-weight: bold;
-		font-size: rem(24);
+		font-size: rem(20);
+		@include media-breakpoint-up(md) {
+			font-size: rem(24);
+		}
 		color: #000;
 	}
 

@@ -2,8 +2,10 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-	min-height: 100%;
+	// min-height: 100%;
+	background-image: url('../img/@2x/form-bg1.jpg');
 	
+
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -13,6 +15,129 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+	.form-wrap {
+		padding-top: rem(30);
+		max-width: rem(600);
+		margin-left: auto;
+		@include media-breakpoint-up(md) {
+			margin-right: rem(30);
+		}
+
+		&__input {
+			border-color: #2a2b47;
+
+			&::placeholder {
+				color: #fff;
+			}
+		}
+
+		&__title {
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(47);
+			}
+		}
+
+		&__service {
+			padding-bottom: rem(40);
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.custom-checkbox {
+			width: auto;
+		}
+
+		&__subtitle {
+			color: $secondary;
+			margin-bottom: rem(21);
+			font-size: rem(24);
+			@include media-breakpoint-down(md) {
+				text-align: center;
+			}
+		}
+
+		&__budgetWrap {
+			display: flex;
+
+			.form-wrap__input-wrap {
+				width: 100%;
+				flex-grow: 1;
+
+				input {
+					border-radius: rem(12) 0 0 rem(12);
+				}
+			}
+		}
+
+		select {
+			width: auto;
+			border-radius: 0 rem(12) rem(12) 0;
+			margin-left: -2px;
+			text-transform: uppercase;
+			color: $secondary;
+		}
+
+		&__btn {
+			font-size: rem(24);
+
+		}
+	}
+
+	p {
+		font-size: rem(20);
+		color: $secondary;
+	}
+}
+
+.fancybox__slide {
+	padding: 0 !important;
+}
+
+.fancybox__content>.carousel__button.is-close {
+	top: 10px;
+	right: 10px;
+}
+
+.form-wrap {
+	&__molnia {
+		display: inline-block;
+		width: 15px;
+    height: 25px;
+		background: url('../img/sprite.png') -1088px -11px no-repeat;
+		margin-left: rem(12);
+	}
+
+}
+
+.custom-checkbox {
+	display: block;
+	cursor: pointer;
+	&__text{
+		padding: 12px 15px;
+    background-color: #2b2c48;
+    display: block;
+    float: left;
+    margin: 5px 3px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #ffffff;
+		@include mt;
+		&:hover{
+			border-color: #FFBA72;
+
+		}
+	}
+	input{
+		@extend .invisible;
+	}
+ 
+	input:checked ~ &__text {
+		background: $secondary;
+		color: #000;
 	}
 }
 

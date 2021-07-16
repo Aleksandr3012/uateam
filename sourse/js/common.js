@@ -20,24 +20,24 @@ const JSCCommon = {
 	modalCall() {
 		const link = ".link-modal-js";
 
-		Fancybox.bind(link , {
-				arrows: false,
-				infobar: false,
-				touch: false,
-				type: 'inline',
-				autoFocus: false,
-				keyboard: {
-						CLOSE: "Закрыть",
-						NEXT: "Вперед",
-						PREV: "Назад",
-						// PLAY_START: "Start slideshow",
+		// Fancybox.bind(link , {
+				// arrows: false,
+				// infobar: false,
+				// touch: false,
+				// type: 'inline',
+				// autoFocus: false,
+				// keyboard: {
+				// 		CLOSE: "Закрыть",
+				// 		NEXT: "Вперед",
+				// 		PREV: "Назад",
+				// 		// PLAY_START: "Start slideshow",
 						// PLAY_STOP: "Pause slideshow",
 						// FULL_SCREEN: "Full screen",
 						// THUMBS: "Thumbnails",
 						// DOWNLOAD: "Download",
 						// SHARE: "Share",
 						// ZOOM: "Zoom"
-					}, 
+					// }, 
 				// beforeLoad: function () {
 				// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
 				// },
@@ -45,8 +45,10 @@ const JSCCommon = {
 				// 	root.style.setProperty('--spacing-end', null);
 				// },
 
-		});
+		// });
 
+		// $(link).fancybox({
+		// });
 
 		$(".modal-close-js").click(function () {
 			fancybox.close();
@@ -224,6 +226,16 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+
+	$('.sitebar__category--js').on('click', function() {
+		$(this).parents('.sitebar').find('.sitebar__sitebarWrap').addClass('active');
+		$(this).parents('body').addClass('fixed');
+	})
+
+	$('.sitebar__closeBtn--js').on('click', function() {
+		$(this).parents('.sitebar__sitebarWrap').removeClass('active');
+		$(this).parents('body').removeClass('fixed');
+	})
 
 
 	function setFixedNav() {
@@ -405,6 +417,7 @@ function eventHandler() {
 		},
 	});
 
+
 	function makeDDGroup(qSelecorts){
 		for (let parentSelect of qSelecorts){
 			let parent = document.querySelector(parentSelect);
@@ -456,6 +469,10 @@ function eventHandler() {
 	}
 
 	load_more_case_folders();
+
+	const caseSlider = new Swiper('.case-filter__slider--js', {
+		slidesPerView: 'auto',
+	});
 
 };
 if (document.readyState !== 'loading') {

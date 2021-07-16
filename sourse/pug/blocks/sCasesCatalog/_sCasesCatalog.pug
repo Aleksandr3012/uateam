@@ -6,13 +6,74 @@ mixin sCasesCatalog(data)
 				h2 КЕЙСЫ
 				
 			.row
+
+				.col.order-lg-last
+					+b.case-filter
+						+e.slider--js.swiper-container 
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+e.item--head.active  Все кейсы
+								+e.slide.swiper-slide.d-none.d-lg-block
+									+e.title Тип услуги 
+								+e.slide.swiper-slide
+									+e.item--group.active
+										+e.sq
+										|  Комплексные кейсы
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| Контекстная реклама
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| SMM
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| SEO
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| Email-маркетинг
+								
+								+e.slide.swiper-slide.d-none.d-lg-block
+									+e.title  Тип проекта
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| E-commerce
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| Образование
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| HoReCa
+								+e.slide.swiper-slide
+									+e.item--group
+										+e.sq
+										| Сфера развлечений
+
 				.col-lg-8
+					+e.left-block
+						+b.top-card-wrap
+							+e.aside  new case
+							+b.top-card
+								+e.head 
+									+e.head-title # SEO-ПРОДВИЖЕНИЕ ДЛЯ САЙТА ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ДЛЯ ТОРГОВЛИ И УПРАВЛЕНИЯ МАГАЗИНОВ
+									
+								+e.body.bg-wrap
+									+pic("Main_screen1.png",'bg').picture-bg
+									+e.body-content
+										+e.name  ТОРГСОФТ
+										+e.tusk ЗАДАЧА:
+										p Достижение ТОП 10 позиции в поисковой системе Google; Увеличить посещаемость сайта; Увеличить количество конверсий.
+										+e.btn(href="#") Подробнее
+						.row.case-nav-folder
+							- for (var x = 0; x < 16; x++)
+								+e.col.col-xl-3.col-lg-4.col-6 
+									+e.item(href="#") #торгсофт
+						button.btn.btn-outline-secondary.js-show-more-cases(type="button") Еще
 
-					.row.case-nav-folder
-						- for (var x = 0; x < 16; x++)
-							+e.col.col-xl-3.col-lg-4.col-6 
-								+e.item(href="#") #торгсофт
-					button.btn.btn-outline-secondary.js-show-more-cases(type="button") Еще
-
-				.col
 	// end sCasesCatalog

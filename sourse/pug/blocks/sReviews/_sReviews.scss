@@ -48,7 +48,10 @@
 			position: absolute;
 			@extend .mono;
 			color: $primary;
-			font-size: rem(377px);
+			font-size: rem(277px);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(377px);
+			}
 			line-height: 1;
 			z-index: -1;
 			margin-top: -.13em;
@@ -56,9 +59,10 @@
 		}
 
 		&::before {
-			top: -100px;
 			left: 0;
+			top: -70px;
 			@include media-breakpoint-up(lg) {
+				top: -100px;
 				left: -50px;
 			}
 		}
@@ -66,7 +70,7 @@
 		&::after {
 			transform: rotate(180deg);
 			right: 0;
-			bottom: -140px;
+			bottom: -120px;
 			@include media-breakpoint-up(lg) {
 				bottom: -120px;
 				right: -50px;

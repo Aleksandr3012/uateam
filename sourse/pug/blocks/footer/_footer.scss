@@ -6,6 +6,9 @@
 
 	&__widget {
 		max-width: rem(200);
+		@include media-breakpoint-down(xl) {
+			padding-top: rem(20);
+		}
 	}
 
 	&__map {
@@ -17,24 +20,38 @@
 	&__partnerWrap {
 		display: flex;
 		flex-wrap: wrap;
+	}
 
+	&__dev {
+		padding-top: rem(10);
 	}
 
 	&__partner {
 		display: inline-flex;
 		flex-wrap: wrap;
 
-		@include roww(5px, m);
-		justify-content: center;
+		@include roww(10px, m);
+		@include media-breakpoint-up(xl) {
+			@include roww(5px, m);
+		}
+		// justify-content: center;
 	}
 
-	&__item img{
+	&__item{
+		img {
 		max-width: 141px;
     max-height: 41px;
-
 		&.svg {
 			width: 100%;
 		}
+	}
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(10);
+			margin-bottom: rem(10);
+			display: inline-block;
+		}
+
+
 	}
 
 	.soc {
